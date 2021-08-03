@@ -1,0 +1,35 @@
+
+.blur-bg {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+.item-container {
+  padding: 2rem;
+  width: 90vw;
+  height: 90vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 10px solid white;
+  border-radius: 5px;
+  transition: all 0.7s;
+}
+
+.close {
+  _width: 8vw;
+  _height: 6vw;
+  position: absolute;
+  right: 4%;
+  top: 4%;
+  text-align: center;
+  _border: 10px solid white;
+  _border-radius: 5px;
+  _padding: 10px;
+}
+
+.close i {
+  color: white;
+  font-size: 50px;
+}
