@@ -1,4 +1,4 @@
-import './assets/styles.css';
+import './assets/styles/main.css';
 import { get } from './services/api/utilities/provider.js';
 
 const btn = document.querySelector('#btn');
