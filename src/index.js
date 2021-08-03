@@ -1,5 +1,6 @@
 import './assets/styles/main.css';
-import './assets/styles/item.css';
+import './assets/styles/item/container.css';
+import './assets/styles/item/details.css';
 import { displayPopup } from './item.js';
 
 const btn = document.querySelector('#btn');

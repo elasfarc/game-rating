@@ -18,3 +18,15 @@ body {
   backface-visibility: hidden;
   transition: filter 0.3s;
 }
+
+.flex {
+  display: flex
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.center {
+  justify-content: center
+}
