@@ -10,6 +10,13 @@ const AddContainerStructureAndStyles = () => {
       <h1>the dark side of the moon</h1>
     `;
 
+  const closeBtn = itemContainer.querySelector('.close');
+  closeBtn.addEventListener('click', () => {
+    itemContainer.classList.add('hide');
+    appContainer.classList.remove('blur-bg');
+    setTimeout(() => { body.removeChild(itemContainer); }, 1000);
+  });
+
   appContainer.classList.add('blur-bg');
   body.appendChild(itemContainer);
 };

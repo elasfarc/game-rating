@@ -33,3 +33,7 @@
   color: white;
   font-size: 50px;
 }
+
+.hide {
+  opacity: 0;
+}
