@@ -1,16 +1,23 @@
+
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-html {
-  font-size: 0.625rem;
+
+#Title{
+  font-family: 'MedievalSharp', cursive;
+  font-size: 5rem;
+}
+
+.navbar-icon {
+  width: 75px;
 }
 
 body {
-  background-color: #923cb5;
-  background-image: linear-gradient(147deg, #923cb5 0%, #000 74%);
+  background-color: rgb(128, 73, 150);
 }
 
 .container {
