@@ -1,10 +1,16 @@
 /* eslint-disable import/prefer-default-export */
 
 const CORS_URL = 'https://cors-anywhere.herokuapp.com';
-const BASE_URL = 'https://age-of-empires-2-api.herokuapp.com/api/v1';
+const BASE_URL = {
+  appID: 'OiEshHziuRYhMOT7MZZJ',
+  AOE: 'https://age-of-empires-2-api.herokuapp.com/api/v1',
+  get involvement() {
+    return `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${this.appID}`;
+  },
+};
 
-export const get = async ({ entrypoint }) => {
-  const url = `${CORS_URL}/${BASE_URL}/${entrypoint}`;
+export const get = async ({ API, entrypoint }) => {
+  const url = `${CORS_URL}/${BASE_URL[API]}/${entrypoint}`;
   try {
     const response = await fetch(url);
     const data = await response.json();

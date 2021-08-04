@@ -25,15 +25,12 @@ const AddContainerStructureAndStyles = () => {
 };
 
 const AddItemDetails = async (itemID = 1) => {
-  const contentContainer = document.querySelector('.content-container');
   const itemDetails = document.createElement('div');
   itemDetails.classList.add('item-details', 'flex', 'space-around');
 
   // external api
   const entrypoint = `civilization/${itemID}`;
-  const result = await get({ entrypoint });
-  console.log(entrypoint, result);
-
+  const result = await get({ API: 'AOE', entrypoint });
   //
   itemDetails.innerHTML = `     
             <div class='data'>
@@ -55,16 +52,49 @@ const AddItemDetails = async (itemID = 1) => {
       bounsList.innerHTML += `<li>${ele}</li>`;
     });
 
-  contentContainer.appendChild(itemDetails);
-  // return itemDetails;
+  return itemDetails;
 };
 
-export const displayPopup = (itemID) => {
+const AddItemcomments = async (itemID = 1) => {
+  const itemComments = document.createElement('div');
+  itemComments.classList.add('item-comments');
+
+  // external api
+  const entrypoint = `comments?item_id=${itemID}`;
+  const comments = await get({ API: 'involvement', entrypoint });
+
+  comments.forEach((comment) => {
+    itemComments.innerHTML = `
+        <div class="comment flex">
+            <div class='avatar flex center y-axis-center'>
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <div class=data flex flex-col center>
+                <p class="name">${comment.username}</p> 
+                <p class="date">${comment.creation_date}</p> 
+                <p class="contnet">${comment.comment}</p>
+            </div>
+        </div>
+        `;
+  });
+
+  return itemComments;
+};
+
+export const displayPopup = async (itemID) => {
   // the whole item container
   AddContainerStructureAndStyles();
   // item info
-  AddItemDetails(itemID);
+
+  const contentContainer = document.querySelector('.content-container');
+  const itemDetails = await AddItemDetails(itemID);
+
+  contentContainer.appendChild(itemDetails);
+
   // item comments
 
+  const itemComments = await AddItemcomments(itemID);
+  contentContainer.appendChild(itemComments);
+  // AddItemcomments(itemID);
   // item add comment
 };

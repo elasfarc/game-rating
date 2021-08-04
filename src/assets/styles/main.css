@@ -35,3 +35,7 @@ body {
 .space-around {
   justify-content: space-around;
 }
+
+.y-axis-center {
+  align-items: center;
+}
