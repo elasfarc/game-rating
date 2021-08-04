@@ -1,16 +1,28 @@
 .content-container {
-    _margin-top: 5rem;
-    margin: 0 auto;
-    _width:  85vw;
-    _height: 85vh;
-    border: 5px solid white;
+  margin: 0 auto;
+  margin-top: 3rem;
+  _width: 85vw;
+  _height: 85vh;
+  _border: 5px solid white;
 }
 
-.item-details  {
-    color: white;
-    font-size: 2rem;
+.item-details {
+  color: #ffd400;
+  font-size: 2rem;
+}
+
+.item-details .data,
+.item-details .img {
+  border: 5px double white;
+  border-radius: 5px;
+}
+
+.item-details p,
+.item-details ul {
+  padding: 2rem;
 }
 
 .item-details .list::before {
-    content: attr(list-label);
+  content: attr(list-label);
+  margin-left: -15px;
 }

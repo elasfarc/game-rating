@@ -15,12 +15,13 @@ body {
 
 .container {
   height: 100vh;
+  max-width: 1200px;
   backface-visibility: hidden;
   transition: filter 0.3s;
 }
 
 .flex {
-  display: flex
+  display: flex;
 }
 
 .flex-col {
@@ -28,5 +29,9 @@ body {
 }
 
 .center {
-  justify-content: center
+  justify-content: center;
+}
+
+.space-around {
+  justify-content: space-around;
 }

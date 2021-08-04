@@ -1,4 +1,5 @@
 import { get } from './services/api/utilities/provider.js';
+import pic from './assets/imgs/1.png';
 
 const AddContainerStructureAndStyles = () => {
   const body = document.querySelector('body');
@@ -21,46 +22,47 @@ const AddContainerStructureAndStyles = () => {
   body.appendChild(itemContainer);
 };
 
-const AddItemDetails = async(itemID=1) => {
-    const contentContainer = document.querySelector('.content-container');
-    const itemDetails = document.createElement('div');
-    itemDetails.classList.add('item-details', 'flex', 'flex-col');
+const AddItemDetails = async (itemID = 1) => {
+  const contentContainer = document.querySelector('.content-container');
+  const itemDetails = document.createElement('div');
+  itemDetails.classList.add('item-details', 'flex', 'space-around');
 
-    // external api
-    let entrypoint = `civilization/${itemID}`;
-    let result = await get({entrypoint})
-    console.log(entrypoint, result)
+  // external api
+  const entrypoint = `civilization/${itemID}`;
+  const result = await get({ entrypoint });
+  console.log(entrypoint, result);
 
-    //
-    itemDetails.innerHTML = 
-        `   
-            
-            <p>name: ${result.name}</p> 
-            <p>id: ${result.id}</p>
-            <p>army type: ${result.army_type}</p>
-            <p>expansion: ${result.expansion}</p>
-            <p>team_bonus: ${result.team_bonus}</p>
-            <ul class='list' list-label="civilization bonus:"></ul>
+  //
+  itemDetails.innerHTML = `     
+            <div class='data'>
+                <p>name: ${result.name}</p> 
+                <p>id: ${result.id}</p>
+                <p>army type: ${result.army_type}</p>
+                <p>expansion: ${result.expansion}</p>
+                <p>team_bonus: ${result.team_bonus}</p>
+                <ul class='list' list-label="civilization bonus:"></ul>
+            </div>
+
+            <div class='img'>
+                <img src='${pic}' alt="">
+            </div> 
         `;
-        let bouns_list = itemDetails.querySelector('ul')
-        result.civilization_bonus
-            .forEach(ele => {
-                bouns_list.innerHTML += `<li>${ele}</li>`
-        })
+  const bounsList = itemDetails.querySelector('ul');
+  result.civilization_bonus
+    .forEach((ele) => {
+      bounsList.innerHTML += `<li>${ele}</li>`;
+    });
 
-
-    contentContainer.appendChild(itemDetails)
-    //return itemDetails;
+  contentContainer.appendChild(itemDetails);
+  // return itemDetails;
 };
 
-
-
 export const displayPopup = () => {
-  //the whole item container 
+  // the whole item container
   AddContainerStructureAndStyles();
-  //item info
+  // item info
   AddItemDetails();
-  //item comments
+  // item comments
 
-  //item add comment
+  // item add comment
 };
