@@ -4,11 +4,11 @@
   _width: 85vw;
   _height: 85vh;
   _border: 5px solid white;
+  color: #ffd400;
+  font-size: 2rem;
 }
 
 .item-details {
-  color: #ffd400;
-  font-size: 2rem;
   max-width: 1200px;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .item-details .img {
-  width: 500px;
+  _width: 500px;
   height: auto;
 }
 
