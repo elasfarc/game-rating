@@ -1,0 +1,56 @@
+.item-comments {
+  color: white;
+  _background-color: rgba(0, 0, 0, 0.5);
+  border: 5px double white;
+  border-radius: 5px;
+  margin-top: 2rem;
+}
+
+.item-comments .comment {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1rem 2rem;
+  margin: 1rem;
+  border-radius: 10px;
+  min-height: 100px;
+}
+
+.comment > p {
+  _margin: 1rem 0;
+}
+
+.comment .avatar {
+  width: 15%;
+  margin-right: 3rem;
+}
+
+.avatar i {
+  font-size: 6rem;
+}
+
+.comment .date {
+  font-size: 70%;
+  letter-spacing: 2px;
+  opacity: 0.5;
+  line-height: 1.8;
+}
+
+.comment .name {
+  font-weight: bold;
+  font-size: 150%;
+}
+
+.comment .contnet {
+  margin: 1rem 0;
+  letter-spacing: 2px;
+  font-size: 120%;
+}
+
+@media only screen and (max-width: 700px) {
+  .comment {
+    justify-content: space-between;
+  }
+
+  .comment .avatar {
+    order: 2;
+  }
+}

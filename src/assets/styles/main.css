@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 0.625rem;
+}
+
+body {
+  background-color: #923cb5;
+  background-image: linear-gradient(147deg, #923cb5 0%, #000 74%);
+}
+
+.container {
+  height: 100vh;
+  max-width: 1200px;
+  backface-visibility: hidden;
+  transition: filter 0.3s;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.center {
+  justify-content: center;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.y-axis-center {
+  align-items: center;
+}
