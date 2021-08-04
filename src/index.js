@@ -10,8 +10,10 @@ const btn = document.querySelector('#btn');
 //   const result = await get({ entrypoint: 'civilization/1' });
 //   console.log(result);
 // });
-
-btn.addEventListener('click', displayPopup);
+const itemID = 5;
+btn.addEventListener('click', () => {
+  displayPopup(itemID);
+});
 
 const container = document.querySelector('.container');
 

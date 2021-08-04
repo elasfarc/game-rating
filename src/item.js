@@ -1,3 +1,5 @@
+/* eslint-disable import/prefer-default-export */
+
 import { get } from './services/api/utilities/provider.js';
 import pic from './assets/imgs/1.png';
 
@@ -57,11 +59,11 @@ const AddItemDetails = async (itemID = 1) => {
   // return itemDetails;
 };
 
-export const displayPopup = () => {
+export const displayPopup = (itemID) => {
   // the whole item container
   AddContainerStructureAndStyles();
   // item info
-  AddItemDetails();
+  AddItemDetails(itemID);
   // item comments
 
   // item add comment
