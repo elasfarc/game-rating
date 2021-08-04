@@ -16,6 +16,7 @@
   _border: 10px solid white;
   border-radius: 5px;
   transition: all 0.6s;
+  overflow-y: scroll;
 }
 
 .close {
