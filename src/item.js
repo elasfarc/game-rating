@@ -59,12 +59,38 @@ const AddItemDetails = async (itemID = 1) => {
   // return itemDetails;
 };
 
+const AddItemcomments = async (itemID = 1) => {
+  const contentContainer = document.querySelector('.content-container');
+  const itemComments = document.createElement('div');
+  itemComments.classList.add('item-comments', 'flex', 'space-around');
+
+  // external api
+  const entrypoint = `comments?item_id=${itemID}`;
+  const comments = await get({ API: 'involvement', entrypoint });
+  console.log(entrypoint, comments);
+
+  comments.forEach((comment) => {
+    itemComments.innerHTML
+        += `
+            <p class=comment>
+                <span class='date'>${comment.creation_date}</span> 
+                <span class='name'>${comment.username}</span> 
+                <span class='contnet'>${comment.comment}</span>
+            </p>
+        `;
+  });
+
+  contentContainer.appendChild(itemComments);
+};
+
 export const displayPopup = (itemID) => {
   // the whole item container
   AddContainerStructureAndStyles();
   // item info
   AddItemDetails(itemID);
+
   // item comments
 
+  AddItemcomments(itemID);
   // item add comment
 };
