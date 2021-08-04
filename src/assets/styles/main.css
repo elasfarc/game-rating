@@ -3,7 +3,9 @@
   padding: 0;
   margin: 0;
 }
-
+html {
+  font-size: 0.625rem;
+}
 #Title {
   font-family: 'MedievalSharp', cursive;
   font-size: 5rem;
