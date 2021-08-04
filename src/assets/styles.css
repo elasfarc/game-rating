@@ -1,9 +1,11 @@
 body {
   background-color: orangered;
 }
+
 #Title {
   font-family: 'MedievalSharp', cursive;
 }
+
 .civ-title {
   font-family: 'Play', sans-serif;
 }
