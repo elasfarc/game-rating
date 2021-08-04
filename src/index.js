@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/styles/main.css';
 import './assets/styles/item/container.css';
 import './assets/styles/item/details.css';

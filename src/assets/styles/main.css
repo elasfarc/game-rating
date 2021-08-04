@@ -8,14 +8,34 @@ html {
   font-size: 0.625rem;
 }
 
+#Title {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 5rem;
+}
+
+.navbar-icon {
+  width: 75px;
+}
+
+.nav-text {
+  font-family: 'Play', sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  border-radius: 10px;
+}
+
+.nav-text:hover {
+  color: #dadada !important;
+  background-color: #4c92d8;
+}
+
 body {
-  background-color: #923cb5;
-  background-image: linear-gradient(147deg, #923cb5 0%, #000 74%);
+  background-color: rgb(128, 73, 150);
 }
 
 .container {
   height: 100vh;
-  max-width: 1200px;
+  max-width: 100vw;
   backface-visibility: hidden;
   transition: filter 0.3s;
 }
