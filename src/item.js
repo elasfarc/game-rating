@@ -25,15 +25,12 @@ const AddContainerStructureAndStyles = () => {
 };
 
 const AddItemDetails = async (itemID = 1) => {
-  const contentContainer = document.querySelector('.content-container');
   const itemDetails = document.createElement('div');
   itemDetails.classList.add('item-details', 'flex', 'space-around');
 
   // external api
   const entrypoint = `civilization/${itemID}`;
   const result = await get({ API: 'AOE', entrypoint });
-  console.log(entrypoint, result);
-
   //
   itemDetails.innerHTML = `     
             <div class='data'>
@@ -55,42 +52,49 @@ const AddItemDetails = async (itemID = 1) => {
       bounsList.innerHTML += `<li>${ele}</li>`;
     });
 
-  contentContainer.appendChild(itemDetails);
-  // return itemDetails;
+  return itemDetails;
 };
 
 const AddItemcomments = async (itemID = 1) => {
-  const contentContainer = document.querySelector('.content-container');
   const itemComments = document.createElement('div');
-  itemComments.classList.add('item-comments', 'flex', 'space-around');
+  itemComments.classList.add('item-comments');
 
   // external api
   const entrypoint = `comments?item_id=${itemID}`;
   const comments = await get({ API: 'involvement', entrypoint });
-  console.log(entrypoint, comments);
 
   comments.forEach((comment) => {
-    itemComments.innerHTML
-        += `
-            <p class=comment>
-                <span class='date'>${comment.creation_date}</span> 
-                <span class='name'>${comment.username}</span> 
-                <span class='contnet'>${comment.comment}</span>
-            </p>
+    itemComments.innerHTML = `
+        <div class="comment flex">
+            <div class='avatar flex center y-axis-center'>
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <div class=data flex flex-col center>
+                <p class="name">${comment.username}</p> 
+                <p class="date">${comment.creation_date}</p> 
+                <p class="contnet">${comment.comment}</p>
+            </div>
+        </div>
         `;
   });
 
-  contentContainer.appendChild(itemComments);
+  return itemComments;
 };
 
-export const displayPopup = (itemID) => {
+export const displayPopup = async (itemID) => {
   // the whole item container
   AddContainerStructureAndStyles();
   // item info
-  AddItemDetails(itemID);
+
+  const contentContainer = document.querySelector('.content-container');
+  const itemDetails = await AddItemDetails(itemID);
+
+  contentContainer.appendChild(itemDetails);
 
   // item comments
 
-  AddItemcomments(itemID);
+  const itemComments = await AddItemcomments(itemID);
+  contentContainer.appendChild(itemComments);
+  // AddItemcomments(itemID);
   // item add comment
 };

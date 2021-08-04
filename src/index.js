@@ -1,6 +1,7 @@
 import './assets/styles/main.css';
 import './assets/styles/item/container.css';
 import './assets/styles/item/details.css';
+import './assets/styles/item/comments.css';
 import { displayPopup } from './item.js';
 
 import pic from './assets/imgs/2.png';
@@ -10,9 +11,9 @@ const btn = document.querySelector('#btn');
 //   const result = await get({ entrypoint: 'civilization/1' });
 //   console.log(result);
 // });
-const itemID = 5;
-btn.addEventListener('click', () => {
-  displayPopup(itemID);
+const itemID = 1;
+btn.addEventListener('click', async () => {
+  await displayPopup(itemID);
 });
 
 const container = document.querySelector('.container');
