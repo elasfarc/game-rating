@@ -31,7 +31,7 @@ const AddItemDetails = async (itemID = 1) => {
 
   // external api
   const entrypoint = `civilization/${itemID}`;
-  const result = await get({ entrypoint });
+  const result = await get({ API: 'AOE', entrypoint });
   console.log(entrypoint, result);
 
   //
