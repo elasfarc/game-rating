@@ -166,7 +166,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"get\": () => (/* binding */ get)\n/* harmony export */ });\n/* eslint-disable import/prefer-default-export */\n\nconst BASE_URL = 'https://age-of-empires-2-api.herokuapp.com/api/v1';\n\nconst get = async ({ entrypoint }) => {\n  const url = `${BASE_URL}/${entrypoint}`;\n  try {\n    const response = await fetch(url);\n    const data = await response.json();\n    return data;\n  } catch (error) {\n    return error;\n  }\n};\n\n//# sourceURL=webpack://game-rating/./src/services/api/utilities/provider.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"get\": () => (/* binding */ get)\n/* harmony export */ });\n/* eslint-disable import/prefer-default-export */\n\nconst CORS_URL = 'https://cors-anywhere.herokuapp.com';\nconst BASE_URL = 'https://age-of-empires-2-api.herokuapp.com/api/v1';\n\nconst get = async ({ entrypoint }) => {\n  const url = `${CORS_URL}/${BASE_URL}/${entrypoint}`;\n  try {\n    const response = await fetch(url);\n    const data = await response.json();\n    return data;\n  } catch (error) {\n    return error;\n  }\n};\n\n//# sourceURL=webpack://game-rating/./src/services/api/utilities/provider.js?");
 
 /***/ }),
 
