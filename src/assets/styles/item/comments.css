@@ -1,10 +1,10 @@
 .item-comments {
   color: white;
   _background-color: rgba(0, 0, 0, 0.5);
-  border: 5px double white;
+  _border: 5px double white;
   border-radius: 5px;
   margin-top: 2rem;
-  max-height: 60vh;
+  max-height: 70vh;
   overflow-y: scroll;
 }
 

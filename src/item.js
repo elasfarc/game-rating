@@ -13,7 +13,8 @@ const generateFlashMsg = ({ status, msg = undefined }) => {
 
 const AddContainerStructureAndStyles = () => {
   const body = document.querySelector('body');
-  const appContainer = document.querySelector('.container');
+  // const appContainer = document.querySelector('.container');
+  const bodyElements = document.querySelectorAll('body > div:not(.item-container), nav, footer');
   const itemContainer = document.createElement('div');
   itemContainer.classList.add('item-container');
   itemContainer.innerHTML = `
@@ -24,11 +25,13 @@ const AddContainerStructureAndStyles = () => {
   const closeBtn = itemContainer.querySelector('.close');
   closeBtn.addEventListener('click', () => {
     itemContainer.classList.add('hide');
-    appContainer.classList.remove('blur-bg');
+    // appContainer.classList.remove('blur-bg');
+    bodyElements.forEach((ele) => ele.classList.remove('blur-bg'));
     setTimeout(() => { body.removeChild(itemContainer); }, 600);
   });
 
-  appContainer.classList.add('blur-bg');
+  // appContainer.classList.add('blur-bg');
+  bodyElements.forEach((ele) => ele.classList.add('blur-bg'));
   body.appendChild(itemContainer);
 };
 
@@ -129,7 +132,7 @@ const createNewCommentForm = (itemID) => {
             </div>
             <form data-itemID='${itemID}' name='newComment' class='flex flex-col y-axis-center'>
                 <input name='name' type="text" placeholder='Enter your name' required>
-                <textarea name="comment" cols="30" rows="10" placeholder='Your insights' required></textarea>
+                <textarea name="comment" cols="30" rows="5" placeholder='Your insights' required></textarea>
                 <button class='btn comment-btn' type="submit">
                     <i class="far fa-paper-plane"></i>
                  </button>
@@ -149,10 +152,6 @@ export const displayPopup = async (itemID) => {
   const itemDetails = await AddItemDetails(itemID);
   contentContainer.appendChild(itemDetails);
 
-  // item comments
-  const itemComments = await DisplayAllItemComments(itemID);
-  contentContainer.appendChild(itemComments);
-
   // item add comment
   const newCommentContainer = createNewCommentForm(itemID);
   contentContainer.appendChild(newCommentContainer);
@@ -160,4 +159,8 @@ export const displayPopup = async (itemID) => {
   // add eventlisteners
   const newCommentForm = document.forms.newComment;
   newCommentForm.addEventListener('submit', submitCommentHandler);
+
+  // item comments
+  const itemComments = await DisplayAllItemComments(itemID);
+  contentContainer.appendChild(itemComments);
 };

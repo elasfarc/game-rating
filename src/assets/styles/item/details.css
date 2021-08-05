@@ -9,11 +9,12 @@
 }
 
 .content-container > div {
-  width: 90%;
+  width: 80%;
   max-width: 1200px;
 }
 
 .item-details {
+  width: 85vw;
   max-width: 1200px;
 }
 
@@ -48,6 +49,7 @@
 @media only screen and (max-width: 960px) {
   .close {
     left: 50%;
+    top: -1%;
   }
 
   .item-details {

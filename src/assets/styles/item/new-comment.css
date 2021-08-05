@@ -15,17 +15,17 @@ form {
 .new-comment-container [name='name'],
 .new-comment-container [name='comment'] {
   font-size: 150%;
-  padding: 2rem;
+  padding: 1.5rem;
   margin-top: 1rem;
-  width: 70%;
+  width: 100%;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
 }
 
 .comment-btn {
   position: absolute;
-  bottom: 10%;
-  right: 20%;
+  bottom: 5%;
+  right: 5%;
   width: 60px;
   height: 60px;
   border-radius: 10000px;
@@ -46,7 +46,7 @@ form {
 }
 
 .comment-btn:active {
-  bottom: 9.5%;
+  bottom: 4.5%;
   box-shadow: 0 0 5px #0e0e0e;
 }
 
