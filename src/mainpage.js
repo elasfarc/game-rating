@@ -9,7 +9,7 @@ const images = importAll(require.context('./assets/img/', false, /\.(png|jpe?g|s
 const createElement = (name = 'temp') => {
   const base = document.getElementById('grid');
   const elemContainer = document.createElement('div');
-  elemContainer.classList.add('col-3', 'list-element', 'mx-2');
+  elemContainer.classList.add('col-4', 'list-element', 'mx-2');
   const img = document.createElement('img');
   img.src = `./assets/img/${name.toLowerCase()}.png`;
   img.alt = '';
@@ -35,7 +35,7 @@ const fillPage = async () => {
     console.log(`${name} and ${i}`);
     const base = document.getElementById('grid');
     const elemContainer = document.createElement('div');
-    elemContainer.classList.add('col-3', 'list-element', 'mx-2');
+    elemContainer.classList.add('col-4', 'list-element');
     const img = document.createElement('img');
     img.src = images[i];
     img.alt = '';
@@ -43,7 +43,7 @@ const fillPage = async () => {
     elemContainer.appendChild(img);
     if (i % 3 === 0) {
       const line = document.createElement('div');
-      line.classList.add('w-100');
+      line.classList.add('w-100', 'my-3');
       base.appendChild(line);
     }
     base.appendChild(elemContainer);
