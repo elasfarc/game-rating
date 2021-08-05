@@ -21,10 +21,11 @@ const fillPage = async () => {
   document.getElementById('grid').innerHTML = '';
   const entrypoint = 'civilizations';
   const result = await get({ API: 'AOE', entrypoint });
-  const sorted = [...result.civilizations].sort((a, b) => a.name.localeCompare(b.name));
-  const uniqueList = sorted.filter((item, pos) => sorted.indexOf(item) === pos);
-  for (let i = 0; i < uniqueList.length; i += 1) {
-    const { name } = uniqueList[i];
+  const sorted = [...result.civilizations.sort((a, b) => a.name.localeCompare(b.name))];
+  sorted.splice(9, 1);
+  sorted.splice(15, 1);
+  for (let i = 0; i < sorted.length; i += 1) {
+    const { name } = sorted[i];
     console.log(`${name} and ${i}`);
     const base = document.getElementById('grid');
     const elemContainer = document.createElement('div');
