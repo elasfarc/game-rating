@@ -85,7 +85,13 @@ const postComment = async ({ item_id, username, comment }) => {
   const { status } = await post({ API: 'involvement', entrypoint, data });
   return status;
 };
-
+const generateFlashMsg = ({status, msg=undefined})=> {
+    const flashMsg = document.createElement('div');
+    flashMsg.classList.add('flash-msg', status);
+    let content = (status === 'success') ? ( msg ||"successfully created 😊" ): (msg || "FAILED 😱");
+    flashMsg.innerText = content;
+    return flashMsg;
+}
 const submitCommentHandler = async (event) => {
   event.preventDefault();
   // extract the data
@@ -95,7 +101,11 @@ const submitCommentHandler = async (event) => {
   const data = { item_id: itemID, username: name.value, comment: comment.value };
   const response = await postComment(data);
 
-  // confirm
+  //confirm
+  let status = (response === 201) ? 'success' : 'danger';
+  let flashMsg = generateFlashMsg({status});
+  event.target.appendChild(flashMsg);
+  setTimeout(() => { event.target.removeChild(flashMsg); }, 2000);
 };
 
 const createNewCommentForm = (itemID) => {
@@ -140,4 +150,6 @@ export const displayPopup = async (itemID) => {
   // add eventlisteners
   const newCommentForm = document.forms.newComment;
   newCommentForm.addEventListener('submit', submitCommentHandler);
+
+
 };
