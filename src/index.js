@@ -4,6 +4,7 @@ import './assets/styles/item/container.css';
 import './assets/styles/item/details.css';
 import './assets/styles/item/comments.css';
 import { displayPopup } from './item.js';
+import fillPage from './mainpage.js';
 
 import pic from './assets/imgs/2.png';
 
@@ -14,6 +15,7 @@ const btn = document.querySelector('#btn');
 // });
 const itemID = 1;
 btn.addEventListener('click', async () => {
+  await fillPage();
   await displayPopup(itemID);
 });
 
