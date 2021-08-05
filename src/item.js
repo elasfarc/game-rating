@@ -3,6 +3,14 @@
 import { get, post } from './services/api/utilities/provider.js';
 import pic from './assets/imgs/1.png';
 
+const generateFlashMsg = ({ status, msg = undefined }) => {
+  const flashMsg = document.createElement('div');
+  flashMsg.classList.add('flash-msg', status);
+  const content = (status === 'success') ? (msg || 'successfully created 😊') : (msg || 'FAILED 😱');
+  flashMsg.innerText = content;
+  return flashMsg;
+};
+
 const AddContainerStructureAndStyles = () => {
   const body = document.querySelector('body');
   const appContainer = document.querySelector('.container');
@@ -79,19 +87,14 @@ const AddItemcomments = async (itemID = 1) => {
 
   return itemComments;
 };
+// eslint-disable-next-line camelcase
 const postComment = async ({ item_id, username, comment }) => {
   const entrypoint = 'comments';
   const data = { item_id, username, comment };
   const { status } = await post({ API: 'involvement', entrypoint, data });
   return status;
 };
-const generateFlashMsg = ({status, msg=undefined})=> {
-    const flashMsg = document.createElement('div');
-    flashMsg.classList.add('flash-msg', status);
-    let content = (status === 'success') ? ( msg ||"successfully created 😊" ): (msg || "FAILED 😱");
-    flashMsg.innerText = content;
-    return flashMsg;
-}
+
 const submitCommentHandler = async (event) => {
   event.preventDefault();
   // extract the data
@@ -101,9 +104,9 @@ const submitCommentHandler = async (event) => {
   const data = { item_id: itemID, username: name.value, comment: comment.value };
   const response = await postComment(data);
 
-  //confirm
-  let status = (response === 201) ? 'success' : 'danger';
-  let flashMsg = generateFlashMsg({status});
+  // confirm
+  const status = (response === 201) ? 'success' : 'danger';
+  const flashMsg = generateFlashMsg({ status });
   event.target.appendChild(flashMsg);
   setTimeout(() => { event.target.removeChild(flashMsg); }, 2000);
 };
@@ -149,6 +152,4 @@ export const displayPopup = async (itemID) => {
   // add eventlisteners
   const newCommentForm = document.forms.newComment;
   newCommentForm.addEventListener('submit', submitCommentHandler);
-
-
 };
