@@ -81,13 +81,11 @@ const AddItemcomments = async (itemID = 1) => {
   return itemComments;
 };
 
-const addNewComment = async()=> {
+const addNewComment = async () => {
+  const newCommentContainer = document.createElement('div');
+  newCommentContainer.classList.add('new-comment-container');
 
-    const newCommentContainer = document.createElement('div');
-    newCommentContainer.classList.add('new-comment-container');
-
-    newCommentContainer.innerHTML =
-        `
+  newCommentContainer.innerHTML = `
             <div class="title">
                 <h1>Add a comment</h1>
             </div>
@@ -100,8 +98,8 @@ const addNewComment = async()=> {
             </form>
 
         `;
-    return newCommentContainer;
-}
+  return newCommentContainer;
+};
 
 export const displayPopup = async (itemID) => {
   // the whole item container
@@ -113,7 +111,7 @@ export const displayPopup = async (itemID) => {
   contentContainer.appendChild(itemDetails);
 
   // item comments
-  const itemComments = await AddItemcomments(itemID); 
+  const itemComments = await AddItemcomments(itemID);
   contentContainer.appendChild(itemComments);
   // AddItemcomments(itemID);
 

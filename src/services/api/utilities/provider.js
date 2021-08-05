@@ -9,12 +9,34 @@ const BASE_URL = {
   },
 };
 
+const postOptions = (data) => ({
+  method: 'POST',
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+  body: JSON.stringify(data),
+});
+
 export const get = async ({ API, entrypoint }) => {
   const url = `${CORS_URL}/${BASE_URL[API]}/${entrypoint}`;
   try {
     const response = await fetch(url);
     const data = await response.json();
     return data;
+  } catch (error) {
+    return error;
+  }
+};
+
+export const post = async ({ API, entrypoint, data }) => {
+  const options = postOptions(data);
+  const url = `${CORS_URL}/${BASE_URL[API]}/${entrypoint}`;
+  console.log(url, options);
+  try {
+    const response = await fetch(url, options);
+    const responseBody = await response.json();
+    console.log(url, options, response, responseBody);
+    return responseBody;
   } catch (error) {
     return error;
   }
