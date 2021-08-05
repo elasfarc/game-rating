@@ -22,8 +22,8 @@ const fillPage = async () => {
   for (let i = 0; i < sorted.length; i += 1) {
     const base = document.getElementById('grid');
     const elemContainer = document.createElement('div');
-    elemContainer.classList.add('col-2', 'list-element', 'card');
-    elemContainer.style = 'width: 12vw';
+    elemContainer.classList.add('col-xl-2', 'list-element', 'card', 'col-12', 'my-xl-2', 'my-3', 'mx-xl-3');
+    elemContainer.id = `Card-${i}`;
     const img = document.createElement('img');
     img.src = images[i];
     img.alt = sorted[i].name;
@@ -31,19 +31,23 @@ const fillPage = async () => {
     elemContainer.appendChild(img);
     const body = document.createElement('div');
     body.classList.add('civ-body-style', 'card-body');
-    const text = document.createElement('h5');
-    text.classList.add('civ-text-style', 'card-title');
+    const text = document.createElement('h3');
+    text.classList.add('civ-text-style', 'card-title', 'h3');
+    text.innerText = `${sorted[i].name}`;
     const likeButton = document.createElement('a');
-    likeButton.classList.add('civ-like-button', 'btn', 'btn-primary');
+    likeButton.classList.add('civ-button', 'btn', 'mx-2');
+    likeButton.id = `Likebutton-${i}`;
     likeButton.innerText = 'Like';
+    likeButton.style = 'width: 40%';
+    const commentButton = document.createElement('a');
+    commentButton.classList.add('civ-button', 'btn', 'mx-2');
+    commentButton.id = `Commentbutton-${i}`;
+    commentButton.innerText = 'Comment';
+    commentButton.style = 'width: 40%';
     body.appendChild(text);
     body.appendChild(likeButton);
+    body.appendChild(commentButton);
     elemContainer.appendChild(body);
-    if (i % 6 === 0) {
-      const line = document.createElement('div');
-      line.classList.add('w-100', 'my-3');
-      base.appendChild(line);
-    }
     base.appendChild(elemContainer);
   }
 };

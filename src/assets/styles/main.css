@@ -18,13 +18,18 @@ html {
   width: 75px;
 }
 
-.civ-img-style {
-  width: 90px;
+@media only screen and (min-width: 1200px) {
+  #grid {
+    margin-left: 25rem;
+    margin-right: 25rem;
+  }
 }
 
-#grid {
-  margin-left: 25rem;
-  margin-right: 25rem;
+@media only screen and (max-width: 1199px) {
+  #grid {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
 }
 
 .list-element {
@@ -32,6 +37,21 @@ html {
   border-style: double;
   border-color: #d1ba36;
   border-radius: 15px;
+}
+
+.civ-img-style {
+  width: 90px;
+}
+
+.civ-button {
+  border: 5px double #d1ba36;
+  border-radius: 6px;
+  font-size: 1.5rem;
+  color: rgb(221, 213, 201)!important;
+}
+
+.civ-text-style {
+  color: antiquewhite;
 }
 
 .nav-text {
