@@ -135,13 +135,12 @@ export const displayPopup = async (itemID) => {
   const contentContainer = document.querySelector('.content-container');
 
   // item info
-  // const itemDetails = await AddItemDetails(itemID);
-  // contentContainer.appendChild(itemDetails);
+  const itemDetails = await AddItemDetails(itemID);
+  contentContainer.appendChild(itemDetails);
 
   // item comments
-  // const itemComments = await AddItemcomments(itemID);
-  // contentContainer.appendChild(itemComments);
-  // AddItemcomments(itemID);
+  const itemComments = await AddItemcomments(itemID);
+  contentContainer.appendChild(itemComments);
 
   // item add comment
   const newCommentContainer = createNewCommentForm(itemID);
