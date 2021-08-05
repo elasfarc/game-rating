@@ -8,6 +8,11 @@
   font-size: 2rem;
 }
 
+.content-container > div {
+  width: 90%;
+  max-width: 1200px;
+}
+
 .item-details {
   max-width: 1200px;
 }
