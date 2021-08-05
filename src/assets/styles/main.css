@@ -33,8 +33,8 @@ html {
 }
 
 .list-element {
-  background-color: transparent;
-  border-style: double;
+  background: rgb(186, 49, 209);
+  background: radial-gradient(circle, rgba(49, 117, 209, 0.5298494397759104) 0%, rgba(19, 63, 128, 0.40940126050420167) 49%, rgba(60, 80, 150, 0.5410539215686274) 100%);
   border-color: #d1ba36;
   border-radius: 15px;
 }
