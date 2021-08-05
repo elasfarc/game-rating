@@ -62,8 +62,19 @@ const AddItemDetails = async (itemID = 1) => {
 
   return itemDetails;
 };
-
-const AddItemcomments = async (itemID = 1) => {
+const createCommentComponnent = ({ username, creationDate, comment }) => `
+    <div class="comment flex">
+        <div class='avatar flex center y-axis-center'>
+            <i class="fas fa-user-circle"></i>
+        </div>
+        <div class=data flex flex-col center>
+            <p class="name">${username}</p> 
+            <p class="date">${creationDate}</p> 
+            <p class="contnet">${comment}</p>
+        </div>
+    </div>
+    `;
+const DisplayAllItemComments = async (itemID = 1) => {
   const itemComments = document.createElement('div');
   itemComments.classList.add('item-comments');
 
@@ -71,18 +82,12 @@ const AddItemcomments = async (itemID = 1) => {
   const entrypoint = `comments?item_id=${itemID}`;
   const comments = await get({ API: 'involvement', entrypoint });
   comments.forEach((comment) => {
-    itemComments.innerHTML += `
-        <div class="comment flex">
-            <div class='avatar flex center y-axis-center'>
-                <i class="fas fa-user-circle"></i>
-            </div>
-            <div class=data flex flex-col center>
-                <p class="name">${comment.username}</p> 
-                <p class="date">${comment.creation_date}</p> 
-                <p class="contnet">${comment.comment}</p>
-            </div>
-        </div>
-        `;
+    const data = {
+      username: comment.username,
+      creationDate: comment.creation_date,
+      comment: comment.comment,
+    };
+    itemComments.innerHTML += createCommentComponnent(data);
   });
 
   return itemComments;
@@ -142,7 +147,7 @@ export const displayPopup = async (itemID) => {
   contentContainer.appendChild(itemDetails);
 
   // item comments
-  const itemComments = await AddItemcomments(itemID);
+  const itemComments = await DisplayAllItemComments(itemID);
   contentContainer.appendChild(itemComments);
 
   // item add comment
