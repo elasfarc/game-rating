@@ -81,51 +81,13 @@ const AddItemcomments = async (itemID = 1) => {
   return itemComments;
 };
 
-export const displayPopup = async (itemID) => {
-  // the whole item container
-  AddContainerStructureAndStyles();
-  // item info
+const addNewComment = async()=> {
 
-  const contentContainer = document.querySelector('.content-container');
-  // const itemDetails = await AddItemDetails(itemID);
+    const newCommentContainer = document.createElement('div');
+    newCommentContainer.classList.add('new-comment-container');
 
-  // contentContainer.appendChild(itemDetails);
-
-  // item comments
-
-  // const itemComments = await AddItemcomments(itemID);
-  // contentContainer.appendChild(itemComments);
-  // AddItemcomments(itemID);
-  // item add comment
-
-  contentContainer.innerHTML = `
-    <div class="item-details flex space-around">     
-            <div class="data">
-                <p>name: Aztecs</p> 
-                <p>id: 1</p>
-                <p>army type: Infantry and Monk</p>
-                <p>expansion: The Conquerors</p>
-                <p>team_bonus: Relics generate +33% gold</p>
-                <ul class="list" list-label="civilization bonus:"><li>Villagers carry +5</li><li>Military units created 15% faster</li><li>+5 Monk hit points for each Monastery technology</li><li>Loom free</li></ul>
-            </div>
-
-            <div class="img">
-                <img src="http://localhost:8080/d98175a1444bb869da95.png" alt="">
-            </div> 
-        </div><div class="item-comments">
-        <div class="comment flex">
-            <div class="avatar flex center y-axis-center">
-                <i class="fas fa-user-circle"></i>
-            </div>
-            <div class="data" flex="" flex-col="" center="">
-                <p class="name">MR.JO</p> 
-                <p class="date">2021-08-04</p> 
-                <p class="contnet">best-game-ever</p>
-            </div>
-        </div>
-        </div>
-
-        <div class="new-comment-container">
+    newCommentContainer.innerHTML =
+        `
             <div class="title">
                 <h1>Add a comment</h1>
             </div>
@@ -134,8 +96,28 @@ export const displayPopup = async (itemID) => {
                 <textarea name="comment-area" cols="30" rows="10" placeholder='Your insights' required></textarea>
                 <button class='btn comment-btn' type="submit">
                     <i class="far fa-paper-plane"></i>
-                </button>
+                 </button>
             </form>
-        </div>
-  `;
+
+        `;
+    return newCommentContainer;
+}
+
+export const displayPopup = async (itemID) => {
+  // the whole item container
+  AddContainerStructureAndStyles();
+  const contentContainer = document.querySelector('.content-container');
+
+  // item info
+  const itemDetails = await AddItemDetails(itemID);
+  contentContainer.appendChild(itemDetails);
+
+  // item comments
+  const itemComments = await AddItemcomments(itemID); 
+  contentContainer.appendChild(itemComments);
+  // AddItemcomments(itemID);
+
+  // item add comment
+  const newCommentContainer = await addNewComment(itemID);
+  contentContainer.appendChild(newCommentContainer);
 };
