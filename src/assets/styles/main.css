@@ -19,7 +19,19 @@ html {
 }
 
 .civ-img-style {
-  width: 75px;
+  width: 90px;
+}
+
+#grid {
+  margin-left: 25rem;
+  margin-right: 25rem;
+}
+
+.list-element {
+  background-color: transparent;
+  border-style: double;
+  border-color: #d1ba36;
+  border-radius: 15px;
 }
 
 .nav-text {
