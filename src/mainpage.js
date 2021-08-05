@@ -20,7 +20,13 @@ const createElement = (name = 'temp') => {
 const fillPage = async () => {
   document.getElementById('grid').innerHTML = '';
   const entrypoint = 'civilizations';
-  const result = await get({ API: 'AOE', entrypoint });
+  let result;
+  if (!localStorage.getItem('database')) {
+    result = await get({ API: 'AOE', entrypoint });
+    window.localStorage.setItem('database', JSON.stringify(result));
+  } else {
+    result = JSON.parse(window.localStorage.getItem('database'));
+  }
   const sorted = [...result.civilizations.sort((a, b) => a.name.localeCompare(b.name))];
   sorted.splice(9, 1);
   sorted.splice(15, 1);
