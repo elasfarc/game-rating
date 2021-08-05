@@ -18,6 +18,42 @@ html {
   width: 75px;
 }
 
+@media only screen and (min-width: 1200px) {
+  #grid {
+    margin-left: 25rem;
+    margin-right: 25rem;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  #grid {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
+
+.list-element {
+  background: rgb(186, 49, 209);
+  background: radial-gradient(circle, rgba(49, 117, 209, 0.5298494397759104) 0%, rgba(19, 63, 128, 0.40940126050420167) 49%, rgba(60, 80, 150, 0.5410539215686274) 100%);
+  border-color: #d1ba36;
+  border-radius: 15px;
+}
+
+.civ-img-style {
+  width: 90px;
+}
+
+.civ-button {
+  border: 5px double #d1ba36;
+  border-radius: 6px;
+  font-size: 1.5rem;
+  color: rgb(221, 213, 201) !important;
+}
+
+.civ-text-style {
+  color: antiquewhite;
+}
+
 .nav-text {
   font-family: 'Play', sans-serif;
   font-weight: bold;
