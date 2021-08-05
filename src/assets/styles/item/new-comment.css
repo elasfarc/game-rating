@@ -49,3 +49,8 @@ form {
   bottom: 9.5%;
   box-shadow: 0 0 5px #0e0e0e;
 }
+
+form .flash-msg {
+  position: absolute;
+  top: 85%;
+}

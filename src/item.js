@@ -18,7 +18,7 @@ const AddContainerStructureAndStyles = () => {
   itemContainer.classList.add('item-container');
   itemContainer.innerHTML = `
       <div class='close'><i class="fas fa-times"></i></div>
-      <div class='content-container flex flex-col'></div>
+      <div class='content-container flex flex-col y-axis-center'></div>
     `;
 
   const closeBtn = itemContainer.querySelector('.close');

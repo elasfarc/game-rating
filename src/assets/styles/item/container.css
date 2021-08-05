@@ -5,7 +5,7 @@
 }
 
 .item-container {
-  max-width: 1200px;
+  _max-width: 1200px;
   padding: 2rem;
   width: 90vw;
   height: 90vh;
@@ -17,6 +17,7 @@
   border-radius: 5px;
   transition: all 0.6s;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .close {
