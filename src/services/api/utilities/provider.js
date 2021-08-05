@@ -31,11 +31,9 @@ export const get = async ({ API, entrypoint }) => {
 export const post = async ({ API, entrypoint, data }) => {
   const options = postOptions(data);
   const url = `${CORS_URL}/${BASE_URL[API]}/${entrypoint}`;
-  console.log(url, options);
   try {
     const response = await fetch(url, options);
     const responseBody = await response.json();
-    console.log(url, options, response, responseBody);
     return responseBody;
   } catch (error) {
     return error;

@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 
-import { get } from './services/api/utilities/provider.js';
+import { get, post } from './services/api/utilities/provider.js';
 import pic from './assets/imgs/1.png';
 
 const AddContainerStructureAndStyles = () => {
@@ -62,9 +62,8 @@ const AddItemcomments = async (itemID = 1) => {
   // external api
   const entrypoint = `comments?item_id=${itemID}`;
   const comments = await get({ API: 'involvement', entrypoint });
-
   comments.forEach((comment) => {
-    itemComments.innerHTML = `
+    itemComments.innerHTML += `
         <div class="comment flex">
             <div class='avatar flex center y-axis-center'>
                 <i class="fas fa-user-circle"></i>
@@ -79,6 +78,12 @@ const AddItemcomments = async (itemID = 1) => {
   });
 
   return itemComments;
+};
+const postComment = async ({ item_id, username, comment }) => {
+  const entrypoint = 'comments';
+  const data = { item_id, username, comment };
+  const { response } = await post({ API: 'involvement', entrypoint, data });
+  return response.status;
 };
 
 const addNewComment = async () => {
