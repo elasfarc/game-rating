@@ -13,7 +13,7 @@ form {
 }
 
 .new-comment-container [name='name'],
-.new-comment-container [name='comment-area'] {
+.new-comment-container [name='comment'] {
   font-size: 150%;
   padding: 2rem;
   margin-top: 1rem;

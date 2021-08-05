@@ -82,11 +82,23 @@ const AddItemcomments = async (itemID = 1) => {
 const postComment = async ({ item_id, username, comment }) => {
   const entrypoint = 'comments';
   const data = { item_id, username, comment };
-  const { response } = await post({ API: 'involvement', entrypoint, data });
-  return response.status;
+  const { status } = await post({ API: 'involvement', entrypoint, data });
+  return status;
 };
 
-const addNewComment = async () => {
+const submitCommentHandler = async (event) => {
+  event.preventDefault();
+  // extract the data
+  const { name, comment } = event.target.elements;
+  const itemID = event.target.dataset.itemid;
+  // call postComment with the data
+  const data = { item_id: itemID, username: name.value, comment: comment.value };
+  const response = await postComment(data);
+
+  // confirm
+};
+
+const createNewCommentForm = (itemID) => {
   const newCommentContainer = document.createElement('div');
   newCommentContainer.classList.add('new-comment-container');
 
@@ -94,15 +106,16 @@ const addNewComment = async () => {
             <div class="title">
                 <h1>Add a comment</h1>
             </div>
-            <form class='flex flex-col y-axis-center'>
+            <form data-itemID='${itemID}' name='newComment' class='flex flex-col y-axis-center'>
                 <input name='name' type="text" placeholder='Enter your name' required>
-                <textarea name="comment-area" cols="30" rows="10" placeholder='Your insights' required></textarea>
+                <textarea name="comment" cols="30" rows="10" placeholder='Your insights' required></textarea>
                 <button class='btn comment-btn' type="submit">
                     <i class="far fa-paper-plane"></i>
                  </button>
             </form>
 
         `;
+
   return newCommentContainer;
 };
 
@@ -112,15 +125,19 @@ export const displayPopup = async (itemID) => {
   const contentContainer = document.querySelector('.content-container');
 
   // item info
-  const itemDetails = await AddItemDetails(itemID);
-  contentContainer.appendChild(itemDetails);
+  // const itemDetails = await AddItemDetails(itemID);
+  // contentContainer.appendChild(itemDetails);
 
   // item comments
-  const itemComments = await AddItemcomments(itemID);
-  contentContainer.appendChild(itemComments);
+  // const itemComments = await AddItemcomments(itemID);
+  // contentContainer.appendChild(itemComments);
   // AddItemcomments(itemID);
 
   // item add comment
-  const newCommentContainer = await addNewComment(itemID);
+  const newCommentContainer = createNewCommentForm(itemID);
   contentContainer.appendChild(newCommentContainer);
+
+  // add eventlisteners
+  const newCommentForm = document.forms.newComment;
+  newCommentForm.addEventListener('submit', submitCommentHandler);
 };
