@@ -111,6 +111,9 @@ const submitCommentHandler = async (event) => {
 
   // confirm
   const status = (response === 201) ? 'success' : 'danger';
+  // eslint-disable-next-line no-unused-expressions
+  (response === 201) && (document.querySelector('.item-comments').innerHTML += createCommentComponnent({ username: name.value, comment: comment.value, creationDate: 'now' }));
+
   const flashMsg = generateFlashMsg({ status });
   event.target.appendChild(flashMsg);
   setTimeout(() => { event.target.removeChild(flashMsg); }, 2000);
