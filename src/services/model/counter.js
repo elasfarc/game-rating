@@ -1,8 +1,8 @@
-class Counter {
+export default class Counter {
     #value
 
-    constructor(){
-        this.#value = 0;
+    constructor({startPoint=0}){
+        this.#value = startPoint;
     }
 
     get value(){
