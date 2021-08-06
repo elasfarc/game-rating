@@ -113,6 +113,18 @@ const postComment = async ({ item_id, username, comment }) => {
   return status;
 };
 
+const handleSubmitionSuccess = ({ name, comment }) => {
+  // Add the comment to the comments container
+  document.querySelector('.item-comments').innerHTML += createCommentComponnent({ username: name.value, comment: comment.value, creationDate: 'now' });
+  // update the comments counter locally
+  const counterContainer = document.getElementById('comments-counter');
+  const currentCounter = counterContainer.innerText;
+  counterContainer.innerText = parseInt(currentCounter, 10) + 1;
+  // clean
+  name.value = '';
+  comment.value = '';
+};
+
 const submitCommentHandler = async (event) => {
   event.preventDefault();
   // extract the data
@@ -124,8 +136,8 @@ const submitCommentHandler = async (event) => {
 
   // confirm
   const status = (response === 201) ? 'success' : 'danger';
-  // eslint-disable-next-line no-unused-expressions
-  (response === 201) && (document.querySelector('.item-comments').innerHTML += createCommentComponnent({ username: name.value, comment: comment.value, creationDate: 'now' }));
+
+  if (response === 201) handleSubmitionSuccess({ name, comment });
 
   const flashMsg = generateFlashMsg({ status });
   event.target.appendChild(flashMsg);
