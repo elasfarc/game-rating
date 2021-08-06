@@ -30,7 +30,7 @@ const fillPage = async () => {
     }
     const base = document.getElementById('grid');
     const elemContainer = document.createElement('div');
-    elemContainer.classList.add('col-xl-2', 'list-element', 'card', 'col-12', 'my-xl-2', 'my-3', 'mx-xl-3');
+    elemContainer.classList.add('col-xxl-2', 'list-element', 'card', 'col-12', 'col-xl-5', 'my-xl-2', 'my-3', 'mx-xl-2');
     elemContainer.id = `Card-${i}`;
     const img = document.createElement('img');
     img.src = images[i];
@@ -43,18 +43,18 @@ const fillPage = async () => {
     text.classList.add('civ-text-style', 'card-title', 'h3');
     text.innerText = `${result.civilizations[i].name}`;
     const likeButton = document.createElement('a');
-    likeButton.classList.add('civ-button', 'btn', 'mx-2');
+    likeButton.classList.add('civ-button', 'btn', 'my-2');
     likeButton.id = `Likebutton-${i + 1}`;
     likeButton.innerText = `Likes : ${INVresult[i].likes}`;
-    likeButton.style = 'width: 40%';
+    likeButton.style = 'width: 80%';
     likeButton.addEventListener('click', () => {
       postLikes(i + 1, INVresult[i].likes);
     });
     const commentButton = document.createElement('a');
-    commentButton.classList.add('civ-button', 'btn', 'mx-2');
+    commentButton.classList.add('civ-button', 'btn', 'my-2');
     commentButton.id = `Commentbutton-${i}`;
     commentButton.innerText = 'Comments';
-    commentButton.style = 'width: 40%';
+    commentButton.style = 'width: 80%';
     commentButton.addEventListener('click', () => {
       displayPopup(errorCounter + 1);
     });
