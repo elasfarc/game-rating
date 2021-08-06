@@ -1,9 +1,11 @@
 /* eslint-disable import/prefer-default-export */
 
-import { get, post } from './services/api/utilities/provider.js';
 import pic from './assets/imgs/1.png';
+import { get, post } from './services/api/utilities/provider.js';
+import { nodeChildrenCounter } from './services/helpers/helpers.js';
 
-const generateFlashMsg = ({ status, msg = undefined }) => {
+const generateFlashMsg = ({ type, msg = undefined }) => {
+  const status = type ? 'success' : 'danger';
   const flashMsg = document.createElement('div');
   flashMsg.classList.add('flash-msg', status);
   const content = (status === 'success') ? (msg || 'successfully created 😊') : (msg || 'FAILED 😱');
@@ -78,6 +80,7 @@ const createCommentComponnent = ({ username, creationDate, comment }) => `
     </div>
     `;
 const DisplayAllItemComments = async (itemID = 1) => {
+  // debugger
   const itemComments = document.createElement('div');
   itemComments.classList.add('item-comments');
 
@@ -93,6 +96,14 @@ const DisplayAllItemComments = async (itemID = 1) => {
     itemComments.innerHTML += createCommentComponnent(data);
   });
 
+  // non-making-sense-req
+  const commentsCounter = nodeChildrenCounter({ node: itemComments });
+  itemComments.insertAdjacentHTML('afterbegin', `
+  <div class='comments-box-heading flex center y-axis-center'>
+      Comments ( <span id='comments-counter'>${commentsCounter.value}</span> )
+  </div>
+`);
+
   return itemComments;
 };
 // eslint-disable-next-line camelcase
@@ -103,6 +114,18 @@ const postComment = async ({ item_id, username, comment }) => {
   return status;
 };
 
+const handleSubmitionSuccess = ({ name, comment }) => {
+  // Add the comment to the comments container
+  document.querySelector('.item-comments').innerHTML += createCommentComponnent({ username: name.value, comment: comment.value, creationDate: 'now' });
+  // update the comments counter locally
+  const counterContainer = document.getElementById('comments-counter');
+  const currentCounter = counterContainer.innerText;
+  counterContainer.innerText = parseInt(currentCounter, 10) + 1;
+  // clean
+  name.value = '';
+  comment.value = '';
+};
+
 const submitCommentHandler = async (event) => {
   event.preventDefault();
   // extract the data
@@ -111,13 +134,10 @@ const submitCommentHandler = async (event) => {
   // call postComment with the data
   const data = { item_id: itemID, username: name.value, comment: comment.value };
   const response = await postComment(data);
-
+  const isSuccessful = (response === 201);
   // confirm
-  const status = (response === 201) ? 'success' : 'danger';
-  // eslint-disable-next-line no-unused-expressions
-  (response === 201) && (document.querySelector('.item-comments').innerHTML += createCommentComponnent({ username: name.value, comment: comment.value, creationDate: 'now' }));
-
-  const flashMsg = generateFlashMsg({ status });
+  if (isSuccessful) handleSubmitionSuccess({ name, comment });
+  const flashMsg = generateFlashMsg({ type: isSuccessful });
   event.target.appendChild(flashMsg);
   setTimeout(() => { event.target.removeChild(flashMsg); }, 2000);
 };
