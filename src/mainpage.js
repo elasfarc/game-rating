@@ -1,6 +1,7 @@
 import { get } from './services/api/utilities/provider.js';
 import { getLikes, postLikes } from './likes.js';
 import { displayPopup } from './item.js';
+import itemCounter from './itemcounter.js';
 
 function importAll(r) {
   return r.keys().map(r);
@@ -9,6 +10,7 @@ function importAll(r) {
 const images = importAll(require.context('./assets/img/', false, /\.(png|jpe?g|svg)$/));
 
 const fillPage = async () => {
+  let itemCount = 0;
   document.getElementById('grid').innerHTML = '';
   const entrypoint = 'civilizations';
   let result;
@@ -49,6 +51,7 @@ const fillPage = async () => {
     likeButton.style = 'width: 80%';
     likeButton.addEventListener('click', () => {
       postLikes(i + 1, INVresult[i].likes);
+      INVresult[i].likes += 1;
     });
     const commentButton = document.createElement('a');
     commentButton.classList.add('civ-button', 'btn', 'my-2');
@@ -63,6 +66,8 @@ const fillPage = async () => {
     body.appendChild(commentButton);
     elemContainer.appendChild(body);
     base.appendChild(elemContainer);
+    itemCount += 1;
   }
+  itemCounter(itemCount);
 };
 export default fillPage;
