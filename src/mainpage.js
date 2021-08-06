@@ -1,5 +1,5 @@
 import { get } from './services/api/utilities/provider.js';
-import getLikes from './getlikes.js';
+import { getLikes, postLikes } from './likes.js';
 import { displayPopup } from './item.js';
 
 function importAll(r) {
@@ -21,15 +21,12 @@ const fillPage = async () => {
   }
   result.civilizations.splice(6, 1);
   result.civilizations.splice(7, 1);
-  let likeInput;
+  INVresult.splice(1, 29);
+  const temp = INVresult.splice(0, 1);
+  INVresult.splice(2, 0, temp[0]);
   for (let i = 0, errorCounter = 0; i < result.civilizations.length; i += 1, errorCounter += 1) {
     if (i === 6 || i === 7) {
       errorCounter += 1;
-    }
-    if (INVresult.length > i) {
-      likeInput = INVresult[i].likes;
-    } else {
-      likeInput = 0;
     }
     const base = document.getElementById('grid');
     const elemContainer = document.createElement('div');
@@ -48,8 +45,13 @@ const fillPage = async () => {
     const likeButton = document.createElement('a');
     likeButton.classList.add('civ-button', 'btn', 'mx-2');
     likeButton.id = `Likebutton-${i}`;
-    likeButton.innerText = `Like : ${likeInput}`;
+    likeButton.innerText = `Like : ${INVresult[i].likes}`;
     likeButton.style = 'width: 40%';
+    likeButton.addEventListener('click', () => {
+      postLikes(i + 1);
+      INVresult[i].likes += 1;
+      likeButton.innerText = `Like : ${INVresult[i].likes}`;
+    });
     const commentButton = document.createElement('a');
     commentButton.classList.add('civ-button', 'btn', 'mx-2');
     commentButton.id = `Commentbutton-${i}`;
