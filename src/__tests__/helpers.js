@@ -1,6 +1,6 @@
-import { nodeChildrenCounter } from '../services/helpers/helpers.js';
+import { elementChildrenCounter } from '../services/helpers/helpers.js';
 
-describe('#nodeChildrenCounter', () => {
+describe('#elementChildrenCounter', () => {
   it('works', () => {
 
   });

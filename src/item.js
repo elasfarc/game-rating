@@ -2,7 +2,7 @@
 
 import pic from './assets/imgs/1.png';
 import { get, post } from './services/api/utilities/provider.js';
-import { nodeChildrenCounter } from './services/helpers/helpers.js';
+import { elementChildrenCounter } from './services/helpers/helpers.js';
 
 const generateFlashMsg = ({ type, msg = undefined }) => {
   const status = type ? 'success' : 'danger';
@@ -97,7 +97,7 @@ const DisplayAllItemComments = async (itemID = 1) => {
   });
 
   // non-making-sense-req
-  const commentsCounter = nodeChildrenCounter({ node: itemComments });
+  const commentsCounter = elementChildrenCounter({ element: itemComments });
   itemComments.insertAdjacentHTML('afterbegin', `
   <div class='comments-box-heading flex center y-axis-center'>
       Comments ( <span id='comments-counter'>${commentsCounter.value}</span> )
