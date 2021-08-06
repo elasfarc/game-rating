@@ -1,3 +1,4 @@
+
 .item-comments {
   color: white;
   _background-color: rgba(0, 0, 0, 0.5);
@@ -6,6 +7,15 @@
   margin-top: 2rem;
   max-height: 70vh;
   overflow-y: scroll;
+}
+
+.item-comments .comments-box-heading {
+  position: sticky;
+  top: 0;
+  text-align: center;
+  height: 4rem;
+  background-color: #1c0234;
+  color: #ffd400;
 }
 
 .item-comments .comment {
