@@ -1,7 +1,8 @@
 /* eslint-disable import/prefer-default-export */
 
-import { get, post } from './services/api/utilities/provider.js';
 import pic from './assets/imgs/1.png';
+import { get, post } from './services/api/utilities/provider.js';
+import { nodeChildrenCounter } from './services/helpers/helpers.js';
 
 const generateFlashMsg = ({ status, msg = undefined }) => {
   const flashMsg = document.createElement('div');
@@ -78,6 +79,7 @@ const createCommentComponnent = ({ username, creationDate, comment }) => `
     </div>
     `;
 const DisplayAllItemComments = async (itemID = 1) => {
+  // debugger
   const itemComments = document.createElement('div');
   itemComments.classList.add('item-comments');
 
@@ -92,6 +94,14 @@ const DisplayAllItemComments = async (itemID = 1) => {
     };
     itemComments.innerHTML += createCommentComponnent(data);
   });
+
+  // non-making-sense-req
+  const commentsCounter = nodeChildrenCounter({ nodeTree: itemComments });
+  itemComments.insertAdjacentHTML('afterbegin', `
+  <div class='comments-box-heading'>
+      Comments ( <span id='comments-counter'>${commentsCounter.value}</span> )
+  </div>
+`);
 
   return itemComments;
 };

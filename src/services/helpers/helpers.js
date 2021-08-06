@@ -1,5 +1,5 @@
-import Counter from './services/model/counter.js'
+/* eslint-disable import/prefer-default-export */
 
-const nodeChildrenCounter = ({nodeTree})=> {
-    return new Counter({startPoint: nodeTree.childElementCount});
- }
+import Counter from '../model/counter.js';
+
+export const nodeChildrenCounter = ({ nodeTree }) => new Counter({ startPoint: nodeTree.childElementCount });
