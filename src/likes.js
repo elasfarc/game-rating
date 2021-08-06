@@ -10,7 +10,6 @@ const postLikes = async (id) => {
   const entrypoint = 'likes';
   const data = { item_id: id };
   const { status } = await post({ API: 'involvement', entrypoint, data });
-  console.log(status);
   return status;
 };
 export { getLikes, postLikes };
