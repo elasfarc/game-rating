@@ -12,6 +12,7 @@ html {
 #Title {
   font-family: 'MedievalSharp', cursive;
   font-size: 5rem;
+  color: #d1ba36;
 }
 
 .navbar-icon {
@@ -70,7 +71,8 @@ body {
   _background-color: rgb(128, 73, 150);
   background-color: #923cb5;
   background-image: linear-gradient(147deg, #923cb5 0%, #000 74%);
-  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .container {
@@ -86,7 +88,7 @@ footer {
 }
 
 .footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
   height: 53px;

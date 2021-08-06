@@ -1,5 +1,5 @@
 import { get } from './services/api/utilities/provider.js';
-import getLikes from './getlikes.js';
+import { getLikes, postLikes } from './likes.js';
 import { displayPopup } from './item.js';
 
 function importAll(r) {
@@ -21,19 +21,16 @@ const fillPage = async () => {
   }
   result.civilizations.splice(6, 1);
   result.civilizations.splice(7, 1);
-  let likeInput;
+  INVresult.splice(1, 29);
+  const temp = INVresult.splice(0, 1);
+  INVresult.splice(2, 0, temp[0]);
   for (let i = 0, errorCounter = 0; i < result.civilizations.length; i += 1, errorCounter += 1) {
     if (i === 6 || i === 7) {
       errorCounter += 1;
     }
-    if (INVresult.length > i) {
-      likeInput = INVresult[i].likes;
-    } else {
-      likeInput = 0;
-    }
     const base = document.getElementById('grid');
     const elemContainer = document.createElement('div');
-    elemContainer.classList.add('col-xl-2', 'list-element', 'card', 'col-12', 'my-xl-2', 'my-3', 'mx-xl-3');
+    elemContainer.classList.add('col-xxl-2', 'list-element', 'card', 'col-12', 'col-xl-5', 'my-xl-2', 'my-3', 'mx-xl-2');
     elemContainer.id = `Card-${i}`;
     const img = document.createElement('img');
     img.src = images[i];
@@ -46,15 +43,18 @@ const fillPage = async () => {
     text.classList.add('civ-text-style', 'card-title', 'h3');
     text.innerText = `${result.civilizations[i].name}`;
     const likeButton = document.createElement('a');
-    likeButton.classList.add('civ-button', 'btn', 'mx-2');
-    likeButton.id = `Likebutton-${i}`;
-    likeButton.innerText = `Like : ${likeInput}`;
-    likeButton.style = 'width: 40%';
+    likeButton.classList.add('civ-button', 'btn', 'my-2');
+    likeButton.id = `Likebutton-${i + 1}`;
+    likeButton.innerText = `Likes : ${INVresult[i].likes}`;
+    likeButton.style = 'width: 80%';
+    likeButton.addEventListener('click', () => {
+      postLikes(i + 1, INVresult[i].likes);
+    });
     const commentButton = document.createElement('a');
-    commentButton.classList.add('civ-button', 'btn', 'mx-2');
+    commentButton.classList.add('civ-button', 'btn', 'my-2');
     commentButton.id = `Commentbutton-${i}`;
     commentButton.innerText = 'Comments';
-    commentButton.style = 'width: 40%';
+    commentButton.style = 'width: 80%';
     commentButton.addEventListener('click', () => {
       displayPopup(errorCounter + 1);
     });
