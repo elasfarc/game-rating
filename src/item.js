@@ -4,7 +4,8 @@ import pic from './assets/imgs/1.png';
 import { get, post } from './services/api/utilities/provider.js';
 import { nodeChildrenCounter } from './services/helpers/helpers.js';
 
-const generateFlashMsg = ({ status, msg = undefined }) => {
+const generateFlashMsg = ({ type, msg = undefined }) => {
+  const status = type ? 'success' : 'danger';
   const flashMsg = document.createElement('div');
   flashMsg.classList.add('flash-msg', status);
   const content = (status === 'success') ? (msg || 'successfully created 😊') : (msg || 'FAILED 😱');
@@ -133,13 +134,10 @@ const submitCommentHandler = async (event) => {
   // call postComment with the data
   const data = { item_id: itemID, username: name.value, comment: comment.value };
   const response = await postComment(data);
-
+  const isSuccessful = (response === 201);
   // confirm
-  const status = (response === 201) ? 'success' : 'danger';
-
-  if (response === 201) handleSubmitionSuccess({ name, comment });
-
-  const flashMsg = generateFlashMsg({ status });
+  if (isSuccessful) handleSubmitionSuccess({ name, comment });
+  const flashMsg = generateFlashMsg({ type: isSuccessful });
   event.target.appendChild(flashMsg);
   setTimeout(() => { event.target.removeChild(flashMsg); }, 2000);
 };
