@@ -86,7 +86,9 @@ const DisplayAllItemComments = async (itemID = 1) => {
 
   // external api
   const entrypoint = `comments?item_id=${itemID}`;
-  const comments = await get({ API: 'involvement', entrypoint });
+  let comments = await get({ API: 'involvement', entrypoint });
+  // eslint-disable-next-line no-unused-expressions
+  comments?.error?.[comments = []];
   comments.forEach((comment) => {
     const data = {
       username: comment.username,
