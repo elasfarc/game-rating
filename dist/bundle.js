@@ -26,6 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***********************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"\\n.item-comments {\\n  color: white;\\n  _background-color: rgba(0, 0, 0, 0.5);\\n  _border: 5px double white;\\n  border-radius: 5px;\\n  margin-top: 2rem;\\n  max-height: 70vh;\\n  overflow-y: scroll;\\n}\\n\\n.item-comments .comments-box-heading {\\n  position: sticky;\\n  top: 0;\\n  height: 4rem;\\n  background-color: #1c0234;\\n  color: #ffd400;\\n}\\n\\n.item-comments .comment {\\n  background-color: rgba(255, 255, 255, 0.5);\\n  padding: 1rem 2rem;\\n  margin: 1rem;\\n  border-radius: 10px;\\n  min-height: 100px;\\n}\\n\\n.comment > p {\\n  _margin: 1rem 0;\\n}\\n\\n.comment .avatar {\\n  width: 15%;\\n  margin-right: 3rem;\\n}\\n\\n.avatar i {\\n  font-size: 6rem;\\n}\\n\\n.comment .date {\\n  font-size: 60%;\\n  letter-spacing: 2px;\\n  _opacity: 0.5;\\n  line-height: 1.8;\\n}\\n\\n.comment .name {\\n  font-weight: bold;\\n  font-size: 150%;\\n}\\n\\n.comment .contnet {\\n  margin: 1rem 0;\\n  letter-spacing: 2px;\\n  font-size: 120%;\\n}\\n\\n@media only screen and (max-width: 700px) {\\n  .comment {\\n    justify-content: space-between;\\n  }\\n\\n  .comment .avatar {\\n    order: 2;\\n  }\\n}\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://game-rating/./src/assets/styles/item/comments.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
@@ -69,7 +70,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"* {\\n  box-sizing: border-box;\\n  padding: 0;\\n  margin: 0;\\n}\\n\\nhtml {\\n  font-size: 0.625rem;\\n  height: 100%;\\n}\\n\\n#Title {\\n  font-family: 'MedievalSharp', cursive;\\n  font-size: 5rem;\\n}\\n\\n.navbar-icon {\\n  width: 75px;\\n}\\n\\n.nav-text {\\n  font-family: 'Play', sans-serif;\\n  font-weight: bold;\\n  font-size: 2rem;\\n  border-radius: 10px;\\n}\\n\\n.nav-text:hover {\\n  color: #dadada !important;\\n  background-color: #4c92d8;\\n}\\n\\nbody {\\n  _background-color: rgb(128, 73, 150);\\n  background-color: #923cb5;\\n  background-image: linear-gradient(147deg, #923cb5 0%, #000 74%);\\n  height: 100%;\\n}\\n\\n.container {\\n  _height: 90%;\\n  max-width: 100vw;\\n  backface-visibility: hidden;\\n}\\n\\n.container,\\nnav,\\nfooter {\\n  transition: filter 0.3s;\\n}\\n\\n.footer {\\n  position: fixed;\\n  bottom: 0;\\n  width: 100%;\\n  height: 53px;\\n  font-size: 1.5rem;\\n  padding-top: 12px;\\n}\\n\\n.flex {\\n  display: flex;\\n}\\n\\n.flex-col {\\n  flex-direction: column;\\n}\\n\\n.center {\\n  justify-content: center;\\n}\\n\\n.space-around {\\n  justify-content: space-around;\\n}\\n\\n.y-axis-center {\\n  align-items: center;\\n}\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://game-rating/./src/assets/styles/main.css?./node_modules/css-loader/dist/cjs.js");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"* {\\n  box-sizing: border-box;\\n  padding: 0;\\n  margin: 0;\\n}\\n\\nhtml {\\n  font-size: 0.625rem;\\n  height: 100%;\\n}\\n\\n#Title {\\n  font-family: 'MedievalSharp', cursive;\\n  font-size: 5rem;\\n  color: #d1ba36;\\n}\\n\\n.navbar-icon {\\n  width: 75px;\\n}\\n\\n@media only screen and (min-width: 1200px) {\\n  #grid {\\n    margin-left: 25rem;\\n    margin-right: 25rem;\\n  }\\n}\\n\\n@media only screen and (max-width: 1199px) {\\n  #grid {\\n    margin-left: 5rem;\\n    margin-right: 5rem;\\n  }\\n}\\n\\n.list-element {\\n  background: rgb(186, 49, 209);\\n  background: radial-gradient(circle, rgba(49, 117, 209, 0.5298494397759104) 0%, rgba(19, 63, 128, 0.40940126050420167) 49%, rgba(60, 80, 150, 0.5410539215686274) 100%);\\n  border-color: #d1ba36;\\n  border-radius: 15px;\\n}\\n\\n.civ-img-style {\\n  width: 90px;\\n}\\n\\n.civ-button {\\n  border: 5px double #d1ba36;\\n  border-radius: 6px;\\n  font-size: 1.5rem;\\n  color: rgb(221, 213, 201) !important;\\n}\\n\\n.civ-text-style {\\n  color: antiquewhite;\\n}\\n\\n.nav-text {\\n  font-family: 'Play', sans-serif;\\n  font-weight: bold;\\n  font-size: 2rem;\\n  border-radius: 10px;\\n}\\n\\n.nav-text:hover {\\n  color: #dadada !important;\\n  background-color: #4c92d8;\\n}\\n\\nbody {\\n  _background-color: rgb(128, 73, 150);\\n  background-color: #923cb5;\\n  background-image: linear-gradient(147deg, #923cb5 0%, #000 74%);\\n  background-repeat: no-repeat;\\n  background-attachment: fixed;\\n}\\n\\n.container {\\n  _height: 90%;\\n  max-width: 100vw;\\n  backface-visibility: hidden;\\n}\\n\\n.container,\\nnav,\\nfooter {\\n  transition: filter 0.3s;\\n}\\n\\n.footer {\\n  position: relative;\\n  bottom: 0;\\n  width: 100%;\\n  height: 53px;\\n  font-size: 1.5rem;\\n  padding-top: 12px;\\n}\\n\\n.flex {\\n  display: flex;\\n}\\n\\n.flex-col {\\n  flex-direction: column;\\n}\\n\\n.center {\\n  justify-content: center;\\n}\\n\\n.space-around {\\n  justify-content: space-around;\\n}\\n\\n.y-axis-center {\\n  align-items: center;\\n}\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://game-rating/./src/assets/styles/main.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -222,18 +224,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, style) {\
   \**************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var map = {\n\t\"./aztecs.png\": \"./src/assets/img/aztecs.png\",\n\t\"./berbers.png\": \"./src/assets/img/berbers.png\",\n\t\"./britons.png\": \"./src/assets/img/britons.png\",\n\t\"./burmese.png\": \"./src/assets/img/burmese.png\",\n\t\"./byzantines.png\": \"./src/assets/img/byzantines.png\",\n\t\"./celts.png\": \"./src/assets/img/celts.png\",\n\t\"./chinese.png\": \"./src/assets/img/chinese.png\",\n\t\"./ethiopians.png\": \"./src/assets/img/ethiopians.png\",\n\t\"./franks.png\": \"./src/assets/img/franks.png\",\n\t\"./goths.png\": \"./src/assets/img/goths.png\",\n\t\"./huns.png\": \"./src/assets/img/huns.png\",\n\t\"./incas.png\": \"./src/assets/img/incas.png\",\n\t\"./indians.png\": \"./src/assets/img/indians.png\",\n\t\"./italians.png\": \"./src/assets/img/italians.png\",\n\t\"./japanese.png\": \"./src/assets/img/japanese.png\",\n\t\"./khmer.png\": \"./src/assets/img/khmer.png\",\n\t\"./koreans.png\": \"./src/assets/img/koreans.png\",\n\t\"./magyars.png\": \"./src/assets/img/magyars.png\",\n\t\"./malians.png\": \"./src/assets/img/malians.png\",\n\t\"./mayans.png\": \"./src/assets/img/mayans.png\",\n\t\"./mongols.png\": \"./src/assets/img/mongols.png\",\n\t\"./persians.png\": \"./src/assets/img/persians.png\",\n\t\"./portuguese.png\": \"./src/assets/img/portuguese.png\",\n\t\"./saracens.png\": \"./src/assets/img/saracens.png\",\n\t\"./slavs.png\": \"./src/assets/img/slavs.png\",\n\t\"./spanish.png\": \"./src/assets/img/spanish.png\",\n\t\"./teutons.png\": \"./src/assets/img/teutons.png\",\n\t\"./turks.png\": \"./src/assets/img/turks.png\",\n\t\"./vietnamese.png\": \"./src/assets/img/vietnamese.png\",\n\t\"./vikings.png\": \"./src/assets/img/vikings.png\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/assets/img sync \\\\.(png|jpe?g|svg)$\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/_sync_nonrecursive_\\.(png%7Cjpe?");
-
-/***/ }),
-
-/***/ "./src/getlikes.js":
-/*!*************************!*\
-  !*** ./src/getlikes.js ***!
-  \*************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _services_api_utilities_provider_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./services/api/utilities/provider.js */ \"./src/services/api/utilities/provider.js\");\n\n\nconst getLikes = async () => {\n  const entrypoint = 'likes';\n  const result = await (0,_services_api_utilities_provider_js__WEBPACK_IMPORTED_MODULE_0__.get)({ API: 'AOE', entrypoint });\n  return result;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({ getLikes });\n\n//# sourceURL=webpack://game-rating/./src/getlikes.js?");
+eval("var map = {\n\t\"./01.png\": \"./src/assets/img/01.png\",\n\t\"./02.png\": \"./src/assets/img/02.png\",\n\t\"./03.png\": \"./src/assets/img/03.png\",\n\t\"./04.png\": \"./src/assets/img/04.png\",\n\t\"./05.png\": \"./src/assets/img/05.png\",\n\t\"./06.png\": \"./src/assets/img/06.png\",\n\t\"./07.png\": \"./src/assets/img/07.png\",\n\t\"./08.png\": \"./src/assets/img/08.png\",\n\t\"./09.png\": \"./src/assets/img/09.png\",\n\t\"./10.png\": \"./src/assets/img/10.png\",\n\t\"./11.png\": \"./src/assets/img/11.png\",\n\t\"./12.png\": \"./src/assets/img/12.png\",\n\t\"./13.png\": \"./src/assets/img/13.png\",\n\t\"./14.png\": \"./src/assets/img/14.png\",\n\t\"./15.png\": \"./src/assets/img/15.png\",\n\t\"./16.png\": \"./src/assets/img/16.png\",\n\t\"./17.png\": \"./src/assets/img/17.png\",\n\t\"./18.png\": \"./src/assets/img/18.png\",\n\t\"./19.png\": \"./src/assets/img/19.png\",\n\t\"./20.png\": \"./src/assets/img/20.png\",\n\t\"./21.png\": \"./src/assets/img/21.png\",\n\t\"./22.png\": \"./src/assets/img/22.png\",\n\t\"./23.png\": \"./src/assets/img/23.png\",\n\t\"./24.png\": \"./src/assets/img/24.png\",\n\t\"./25.png\": \"./src/assets/img/25.png\",\n\t\"./26.png\": \"./src/assets/img/26.png\",\n\t\"./27.png\": \"./src/assets/img/27.png\",\n\t\"./28.png\": \"./src/assets/img/28.png\",\n\t\"./29.png\": \"./src/assets/img/29.png\",\n\t\"./30.png\": \"./src/assets/img/30.png\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/assets/img sync \\\\.(png|jpe?g|svg)$\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/_sync_nonrecursive_\\.(png%7Cjpe?");
 
 /***/ }),
 
@@ -244,7 +235,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\n/* harmony import */ var _assets_styles_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/styles/main.css */ \"./src/assets/styles/main.css\");\n/* harmony import */ var _assets_styles_item_container_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/styles/item/container.css */ \"./src/assets/styles/item/container.css\");\n/* harmony import */ var _assets_styles_item_details_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/styles/item/details.css */ \"./src/assets/styles/item/details.css\");\n/* harmony import */ var _assets_styles_item_comments_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/styles/item/comments.css */ \"./src/assets/styles/item/comments.css\");\n/* harmony import */ var _assets_styles_item_new_comment_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/styles/item/new-comment.css */ \"./src/assets/styles/item/new-comment.css\");\n/* harmony import */ var _item_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./item.js */ \"./src/item.js\");\n/* harmony import */ var _mainpage_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./mainpage.js */ \"./src/mainpage.js\");\n\n\n\n\n\n\n\n\n\nconst btn = document.querySelector('#btn');\nbtn.addEventListener('click', async () => {\n  await (0,_mainpage_js__WEBPACK_IMPORTED_MODULE_7__.default)();\n  await (0,_item_js__WEBPACK_IMPORTED_MODULE_6__.displayPopup)(1);\n});\n\n//# sourceURL=webpack://game-rating/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\n/* harmony import */ var _assets_styles_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/styles/main.css */ \"./src/assets/styles/main.css\");\n/* harmony import */ var _assets_styles_item_container_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/styles/item/container.css */ \"./src/assets/styles/item/container.css\");\n/* harmony import */ var _assets_styles_item_details_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/styles/item/details.css */ \"./src/assets/styles/item/details.css\");\n/* harmony import */ var _assets_styles_item_comments_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/styles/item/comments.css */ \"./src/assets/styles/item/comments.css\");\n/* harmony import */ var _assets_styles_item_new_comment_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/styles/item/new-comment.css */ \"./src/assets/styles/item/new-comment.css\");\n/* harmony import */ var _mainpage_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./mainpage.js */ \"./src/mainpage.js\");\n\n\n\n\n\n\n\n\ndocument.addEventListener('DOMContentLoaded', async () => {\n  await (0,_mainpage_js__WEBPACK_IMPORTED_MODULE_6__.default)();\n});\n\n//# sourceURL=webpack://game-rating/./src/index.js?");
 
 /***/ }),
 
@@ -255,7 +246,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var boot
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"displayPopup\": () => (/* binding */ displayPopup)\n/* harmony export */ });\n/* harmony import */ var _services_api_utilities_provider_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./services/api/utilities/provider.js */ \"./src/services/api/utilities/provider.js\");\n/* harmony import */ var _assets_imgs_1_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/imgs/1.png */ \"./src/assets/imgs/1.png\");\n/* eslint-disable import/prefer-default-export */\n\n\n\n\nconst generateFlashMsg = ({ status, msg = undefined }) => {\n  const flashMsg = document.createElement('div');\n  flashMsg.classList.add('flash-msg', status);\n  const content = (status === 'success') ? (msg || 'successfully created 😊') : (msg || 'FAILED 😱');\n  flashMsg.innerText = content;\n  return flashMsg;\n};\n\nconst AddContainerStructureAndStyles = () => {\n  const body = document.querySelector('body');\n  // const appContainer = document.querySelector('.container');\n  const bodyElements = document.querySelectorAll('body > div:not(.item-container), nav, footer');\n  const itemContainer = document.createElement('div');\n  itemContainer.classList.add('item-container');\n  itemContainer.innerHTML = `\n      <div class='close'><i class=\"fas fa-times\"></i></div>\n      <div class='content-container flex flex-col y-axis-center'></div>\n    `;\n\n  const closeBtn = itemContainer.querySelector('.close');\n  closeBtn.addEventListener('click', () => {\n    itemContainer.classList.add('hide');\n    // appContainer.classList.remove('blur-bg');\n    bodyElements.forEach((ele) => ele.classList.remove('blur-bg'));\n    setTimeout(() => { body.removeChild(itemContainer); }, 600);\n  });\n\n  // appContainer.classList.add('blur-bg');\n  bodyElements.forEach((ele) => ele.classList.add('blur-bg'));\n  body.appendChild(itemContainer);\n};\n\nconst AddItemDetails = async (itemID = 1) => {\n  const itemDetails = document.createElement('div');\n  itemDetails.classList.add('item-details', 'flex', 'space-around');\n\n  // external api\n  const entrypoint = `civilization/${itemID}`;\n  const result = await (0,_services_api_utilities_provider_js__WEBPACK_IMPORTED_MODULE_0__.get)({ API: 'AOE', entrypoint });\n  //\n  itemDetails.innerHTML = `     \n            <div class='data'>\n                <p>name: ${result.name}</p> \n                <p>id: ${result.id}</p>\n                <p>army type: ${result.army_type}</p>\n                <p>expansion: ${result.expansion}</p>\n                <p>team_bonus: ${result.team_bonus}</p>\n                <ul class='list' list-label=\"civilization bonus:\"></ul>\n            </div>\n\n            <div class='img'>\n                <img src='${_assets_imgs_1_png__WEBPACK_IMPORTED_MODULE_1__}' alt=\"\">\n            </div> \n        `;\n  const bounsList = itemDetails.querySelector('ul');\n  result.civilization_bonus\n    .forEach((ele) => {\n      bounsList.innerHTML += `<li>${ele}</li>`;\n    });\n\n  return itemDetails;\n};\nconst createCommentComponnent = ({ username, creationDate, comment }) => `\n    <div class=\"comment flex\">\n        <div class='avatar flex center y-axis-center'>\n            <i class=\"fas fa-user-circle\"></i>\n        </div>\n        <div class=data flex flex-col center>\n            <p class=\"name\">${username}</p> \n            <p class=\"date\">${creationDate}</p> \n            <p class=\"contnet\">${comment}</p>\n        </div>\n    </div>\n    `;\nconst DisplayAllItemComments = async (itemID = 1) => {\n  const itemComments = document.createElement('div');\n  itemComments.classList.add('item-comments');\n\n  // external api\n  const entrypoint = `comments?item_id=${itemID}`;\n  const comments = await (0,_services_api_utilities_provider_js__WEBPACK_IMPORTED_MODULE_0__.get)({ API: 'involvement', entrypoint });\n  comments.forEach((comment) => {\n    const data = {\n      username: comment.username,\n      creationDate: comment.creation_date,\n      comment: comment.comment,\n    };\n    itemComments.innerHTML += createCommentComponnent(data);\n  });\n\n  return itemComments;\n};\n// eslint-disable-next-line camelcase\nconst postComment = async ({ item_id, username, comment }) => {\n  const entrypoint = 'comments';\n  const data = { item_id, username, comment };\n  const { status } = await (0,_services_api_utilities_provider_js__WEBPACK_IMPORTED_MODULE_0__.post)({ API: 'involvement', entrypoint, data });\n  return status;\n};\n\nconst submitCommentHandler = async (event) => {\n  event.preventDefault();\n  // extract the data\n  const { name, comment } = event.target.elements;\n  const itemID = event.target.dataset.itemid;\n  // call postComment with the data\n  const data = { item_id: itemID, username: name.value, comment: comment.value };\n  const response = await postComment(data);\n\n  // confirm\n  const status = (response === 201) ? 'success' : 'danger';\n  // eslint-disable-next-line no-unused-expressions\n  (response === 201) && (document.querySelector('.item-comments').innerHTML += createCommentComponnent({ username: name.value, comment: comment.value, creationDate: 'now' }));\n\n  const flashMsg = generateFlashMsg({ status });\n  event.target.appendChild(flashMsg);\n  setTimeout(() => { event.target.removeChild(flashMsg); }, 2000);\n};\n\nconst createNewCommentForm = (itemID) => {\n  const newCommentContainer = document.createElement('div');\n  newCommentContainer.classList.add('new-comment-container');\n\n  newCommentContainer.innerHTML = `\n            <div class=\"title\">\n                <h1>Add a comment</h1>\n            </div>\n            <form data-itemID='${itemID}' name='newComment' class='flex flex-col y-axis-center'>\n                <input name='name' type=\"text\" placeholder='Enter your name' required>\n                <textarea name=\"comment\" cols=\"30\" rows=\"5\" placeholder='Your insights' required></textarea>\n                <button class='btn comment-btn' type=\"submit\">\n                    <i class=\"far fa-paper-plane\"></i>\n                 </button>\n            </form>\n\n        `;\n\n  return newCommentContainer;\n};\n\nconst displayPopup = async (itemID) => {\n  // the whole item container\n  AddContainerStructureAndStyles();\n  const contentContainer = document.querySelector('.content-container');\n\n  // item info\n  const itemDetails = await AddItemDetails(itemID);\n  contentContainer.appendChild(itemDetails);\n\n  // item add comment\n  const newCommentContainer = createNewCommentForm(itemID);\n  contentContainer.appendChild(newCommentContainer);\n\n  // add eventlisteners\n  const newCommentForm = document.forms.newComment;\n  newCommentForm.addEventListener('submit', submitCommentHandler);\n\n  // item comments\n  const itemComments = await DisplayAllItemComments(itemID);\n  contentContainer.appendChild(itemComments);\n};\n\n\n//# sourceURL=webpack://game-rating/./src/item.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"displayPopup\": () => (/* binding */ displayPopup)\n/* harmony export */ });\n/* harmony import */ var _assets_imgs_1_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/imgs/1.png */ \"./src/assets/imgs/1.png\");\n/* harmony import */ var _services_api_utilities_provider_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./services/api/utilities/provider.js */ \"./src/services/api/utilities/provider.js\");\n/* harmony import */ var _services_helpers_helpers_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./services/helpers/helpers.js */ \"./src/services/helpers/helpers.js\");\n/* eslint-disable import/prefer-default-export */\n\n\n\n\n\nconst generateFlashMsg = ({ type, msg = undefined }) => {\n  const status = type ? 'success' : 'danger';\n  const flashMsg = document.createElement('div');\n  flashMsg.classList.add('flash-msg', status);\n  const content = (status === 'success') ? (msg || 'successfully created 😊') : (msg || 'FAILED 😱');\n  flashMsg.innerText = content;\n  return flashMsg;\n};\n\nconst AddContainerStructureAndStyles = () => {\n  const body = document.querySelector('body');\n  // const appContainer = document.querySelector('.container');\n  const bodyElements = document.querySelectorAll('body > div:not(.item-container), nav, footer');\n  const itemContainer = document.createElement('div');\n  itemContainer.classList.add('item-container');\n  itemContainer.innerHTML = `\n      <div class='close'><i class=\"fas fa-times\"></i></div>\n      <div class='content-container flex flex-col y-axis-center'></div>\n    `;\n\n  const closeBtn = itemContainer.querySelector('.close');\n  closeBtn.addEventListener('click', () => {\n    itemContainer.classList.add('hide');\n    // appContainer.classList.remove('blur-bg');\n    bodyElements.forEach((ele) => ele.classList.remove('blur-bg'));\n    setTimeout(() => { body.removeChild(itemContainer); }, 600);\n  });\n\n  // appContainer.classList.add('blur-bg');\n  bodyElements.forEach((ele) => ele.classList.add('blur-bg'));\n  body.appendChild(itemContainer);\n};\n\nconst AddItemDetails = async (itemID = 1) => {\n  const itemDetails = document.createElement('div');\n  itemDetails.classList.add('item-details', 'flex', 'space-around');\n\n  // external api\n  const entrypoint = `civilization/${itemID}`;\n  const result = await (0,_services_api_utilities_provider_js__WEBPACK_IMPORTED_MODULE_1__.get)({ API: 'AOE', entrypoint });\n  //\n  itemDetails.innerHTML = `     \n            <div class='data'>\n                <p>name: ${result.name}</p> \n                <p>id: ${result.id}</p>\n                <p>army type: ${result.army_type}</p>\n                <p>expansion: ${result.expansion}</p>\n                <p>team_bonus: ${result.team_bonus}</p>\n                <ul class='list' list-label=\"civilization bonus:\"></ul>\n            </div>\n\n            <div class='img'>\n                <img src='${_assets_imgs_1_png__WEBPACK_IMPORTED_MODULE_0__}' alt=\"\">\n            </div> \n        `;\n  const bounsList = itemDetails.querySelector('ul');\n  result.civilization_bonus\n    .forEach((ele) => {\n      bounsList.innerHTML += `<li>${ele}</li>`;\n    });\n\n  return itemDetails;\n};\nconst createCommentComponnent = ({ username, creationDate, comment }) => `\n    <div class=\"comment flex\">\n        <div class='avatar flex center y-axis-center'>\n            <i class=\"fas fa-user-circle\"></i>\n        </div>\n        <div class=data flex flex-col center>\n            <p class=\"name\">${username}</p> \n            <p class=\"date\">${creationDate}</p> \n            <p class=\"contnet\">${comment}</p>\n        </div>\n    </div>\n    `;\nconst DisplayAllItemComments = async (itemID = 1) => {\n  // debugger\n  const itemComments = document.createElement('div');\n  itemComments.classList.add('item-comments');\n\n  // external api\n  const entrypoint = `comments?item_id=${itemID}`;\n  const comments = await (0,_services_api_utilities_provider_js__WEBPACK_IMPORTED_MODULE_1__.get)({ API: 'involvement', entrypoint });\n  comments.forEach((comment) => {\n    const data = {\n      username: comment.username,\n      creationDate: comment.creation_date,\n      comment: comment.comment,\n    };\n    itemComments.innerHTML += createCommentComponnent(data);\n  });\n\n  // non-making-sense-req\n  const commentsCounter = (0,_services_helpers_helpers_js__WEBPACK_IMPORTED_MODULE_2__.nodeChildrenCounter)({ node: itemComments });\n  itemComments.insertAdjacentHTML('afterbegin', `\n  <div class='comments-box-heading flex center y-axis-center'>\n      Comments ( <span id='comments-counter'>${commentsCounter.value}</span> )\n  </div>\n`);\n\n  return itemComments;\n};\n// eslint-disable-next-line camelcase\nconst postComment = async ({ item_id, username, comment }) => {\n  const entrypoint = 'comments';\n  const data = { item_id, username, comment };\n  const { status } = await (0,_services_api_utilities_provider_js__WEBPACK_IMPORTED_MODULE_1__.post)({ API: 'involvement', entrypoint, data });\n  return status;\n};\n\nconst handleSubmitionSuccess = ({ name, comment }) => {\n  // Add the comment to the comments container\n  document.querySelector('.item-comments').innerHTML += createCommentComponnent({ username: name.value, comment: comment.value, creationDate: 'now' });\n  // update the comments counter locally\n  const counterContainer = document.getElementById('comments-counter');\n  const currentCounter = counterContainer.innerText;\n  counterContainer.innerText = parseInt(currentCounter, 10) + 1;\n  // clean\n  name.value = '';\n  comment.value = '';\n};\n\nconst submitCommentHandler = async (event) => {\n  event.preventDefault();\n  // extract the data\n  const { name, comment } = event.target.elements;\n  const itemID = event.target.dataset.itemid;\n  // call postComment with the data\n  const data = { item_id: itemID, username: name.value, comment: comment.value };\n  const response = await postComment(data);\n  const isSuccessful = (response === 201);\n  // confirm\n  if (isSuccessful) handleSubmitionSuccess({ name, comment });\n  const flashMsg = generateFlashMsg({ type: isSuccessful });\n  event.target.appendChild(flashMsg);\n  setTimeout(() => { event.target.removeChild(flashMsg); }, 2000);\n};\n\nconst createNewCommentForm = (itemID) => {\n  const newCommentContainer = document.createElement('div');\n  newCommentContainer.classList.add('new-comment-container');\n\n  newCommentContainer.innerHTML = `\n            <div class=\"title\">\n                <h1>Add a comment</h1>\n            </div>\n            <form data-itemID='${itemID}' name='newComment' class='flex flex-col y-axis-center'>\n                <input name='name' type=\"text\" placeholder='Enter your name' required>\n                <textarea name=\"comment\" cols=\"30\" rows=\"5\" placeholder='Your insights' required></textarea>\n                <button class='btn comment-btn' type=\"submit\">\n                    <i class=\"far fa-paper-plane\"></i>\n                 </button>\n            </form>\n\n        `;\n\n  return newCommentContainer;\n};\n\nconst displayPopup = async (itemID) => {\n  // the whole item container\n  AddContainerStructureAndStyles();\n  const contentContainer = document.querySelector('.content-container');\n\n  // item info\n  const itemDetails = await AddItemDetails(itemID);\n  contentContainer.appendChild(itemDetails);\n\n  // item add comment\n  const newCommentContainer = createNewCommentForm(itemID);\n  contentContainer.appendChild(newCommentContainer);\n\n  // add eventlisteners\n  const newCommentForm = document.forms.newComment;\n  newCommentForm.addEventListener('submit', submitCommentHandler);\n\n  // item comments\n  const itemComments = await DisplayAllItemComments(itemID);\n  contentContainer.appendChild(itemComments);\n};\n\n//# sourceURL=webpack://game-rating/./src/item.js?");
+
+/***/ }),
+
+/***/ "./src/itemcounter.js":
+/*!****************************!*\
+  !*** ./src/itemcounter.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst itemCounter = (num) => {\n  document.getElementById('title').innerText += `     Item Count: ${num}`;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (itemCounter);\n\n//# sourceURL=webpack://game-rating/./src/itemcounter.js?");
+
+/***/ }),
+
+/***/ "./src/likes.js":
+/*!**********************!*\
+  !*** ./src/likes.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getLikes\": () => (/* binding */ getLikes),\n/* harmony export */   \"postLikes\": () => (/* binding */ postLikes)\n/* harmony export */ });\n/* harmony import */ var _services_api_utilities_provider_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./services/api/utilities/provider.js */ \"./src/services/api/utilities/provider.js\");\n\n\nconst getLikes = async () => {\n  const entrypoint = 'likes/';\n  const result = await (0,_services_api_utilities_provider_js__WEBPACK_IMPORTED_MODULE_0__.get)({ API: 'involvement', entrypoint });\n  return result;\n};\n\nconst postLikes = async (id, currentLikes) => {\n  const entrypoint = 'likes';\n  const data = { item_id: id };\n  const { status } = await (0,_services_api_utilities_provider_js__WEBPACK_IMPORTED_MODULE_0__.post)({ API: 'involvement', entrypoint, data });\n  document.getElementById(`Likebutton-${id}`).innerText = `Likes: ${currentLikes + 1}`;\n  return status;\n};\n\n\n//# sourceURL=webpack://game-rating/./src/likes.js?");
 
 /***/ }),
 
@@ -266,7 +279,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _services_api_utilities_provider_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./services/api/utilities/provider.js */ \"./src/services/api/utilities/provider.js\");\n/* harmony import */ var _getlikes_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./getlikes.js */ \"./src/getlikes.js\");\n\n\n\nfunction importAll(r) {\n  return r.keys().map(r);\n}\n\nconst images = importAll(__webpack_require__(\"./src/assets/img sync \\\\.(png|jpe?g|svg)$\"));\n\nconst fillPage = async () => {\n  document.getElementById('grid').innerHTML = '';\n  const entrypoint = 'civilizations';\n  let result;\n  const INVresult = await (0,_getlikes_js__WEBPACK_IMPORTED_MODULE_1__.default)();\n  console.log(INVresult);\n  if (!localStorage.getItem('database')) {\n    result = await (0,_services_api_utilities_provider_js__WEBPACK_IMPORTED_MODULE_0__.get)({ API: 'AOE', entrypoint });\n    window.localStorage.setItem('database', JSON.stringify(result));\n  } else {\n    result = JSON.parse(window.localStorage.getItem('database'));\n  }\n  const sorted = [...result.civilizations.sort((a, b) => a.name.localeCompare(b.name))];\n  sorted.splice(9, 1);\n  sorted.splice(15, 1);\n  for (let i = 0; i < sorted.length; i += 1) {\n    const base = document.getElementById('grid');\n    const elemContainer = document.createElement('div');\n    elemContainer.classList.add('col-xl-2', 'list-element', 'card', 'col-12', 'my-xl-2', 'my-3', 'mx-xl-3');\n    elemContainer.id = `Card-${i}`;\n    const img = document.createElement('img');\n    img.src = images[i];\n    img.alt = sorted[i].name;\n    img.classList.add('civ-img-style', 'card-img-top', 'mx-auto');\n    elemContainer.appendChild(img);\n    const body = document.createElement('div');\n    body.classList.add('civ-body-style', 'card-body');\n    const text = document.createElement('h3');\n    text.classList.add('civ-text-style', 'card-title', 'h3');\n    text.innerText = `${sorted[i].name}`;\n    const likeButton = document.createElement('a');\n    likeButton.classList.add('civ-button', 'btn', 'mx-2');\n    likeButton.id = `Likebutton-${i}`;\n    likeButton.innerText = 'Like';\n    likeButton.style = 'width: 40%';\n    const commentButton = document.createElement('a');\n    commentButton.classList.add('civ-button', 'btn', 'mx-2');\n    commentButton.id = `Commentbutton-${i}`;\n    commentButton.innerText = 'Comment';\n    commentButton.style = 'width: 40%';\n    body.appendChild(text);\n    body.appendChild(likeButton);\n    body.appendChild(commentButton);\n    elemContainer.appendChild(body);\n    base.appendChild(elemContainer);\n  }\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (fillPage);\n\n//# sourceURL=webpack://game-rating/./src/mainpage.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _services_api_utilities_provider_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./services/api/utilities/provider.js */ \"./src/services/api/utilities/provider.js\");\n/* harmony import */ var _likes_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./likes.js */ \"./src/likes.js\");\n/* harmony import */ var _item_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./item.js */ \"./src/item.js\");\n/* harmony import */ var _itemcounter_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./itemcounter.js */ \"./src/itemcounter.js\");\n\n\n\n\n\nfunction importAll(r) {\n  return r.keys().map(r);\n}\n\nconst images = importAll(__webpack_require__(\"./src/assets/img sync \\\\.(png|jpe?g|svg)$\"));\n\nlet itemCount;\nconst fillPage = async () => {\n  document.getElementById('grid').innerHTML = '';\n  const entrypoint = 'civilizations';\n  let result;\n  const INVresult = await (0,_likes_js__WEBPACK_IMPORTED_MODULE_1__.getLikes)();\n  if (!localStorage.getItem('database')) {\n    result = await (0,_services_api_utilities_provider_js__WEBPACK_IMPORTED_MODULE_0__.get)({ API: 'AOE', entrypoint });\n    window.localStorage.setItem('database', JSON.stringify(result));\n  } else {\n    result = JSON.parse(window.localStorage.getItem('database'));\n  }\n  result.civilizations.splice(6, 1);\n  result.civilizations.splice(7, 1);\n  INVresult.splice(1, 29);\n  const temp = INVresult.splice(0, 1);\n  INVresult.splice(2, 0, temp[0]);\n  for (let i = 0, errorCounter = 0; i < result.civilizations.length; i += 1, errorCounter += 1) {\n    if (i === 6 || i === 7) {\n      errorCounter += 1;\n    }\n    const base = document.getElementById('grid');\n    const elemContainer = document.createElement('div');\n    elemContainer.classList.add('col-xxl-2', 'list-element', 'card', 'col-12', 'col-xl-5', 'my-xl-2', 'my-3', 'mx-xl-2');\n    elemContainer.id = `Card-${i}`;\n    const img = document.createElement('img');\n    img.src = images[i];\n    img.alt = result.civilizations[i].name;\n    img.classList.add('civ-img-style', 'card-img-top', 'mx-auto');\n    elemContainer.appendChild(img);\n    const body = document.createElement('div');\n    body.classList.add('civ-body-style', 'card-body');\n    const text = document.createElement('h3');\n    text.classList.add('civ-text-style', 'card-title', 'h3');\n    text.innerText = `${result.civilizations[i].name}`;\n    const likeButton = document.createElement('a');\n    likeButton.classList.add('civ-button', 'btn', 'my-2');\n    likeButton.id = `Likebutton-${i + 1}`;\n    likeButton.innerText = `Likes : ${INVresult[i].likes}`;\n    likeButton.style = 'width: 80%';\n    likeButton.addEventListener('click', () => {\n      (0,_likes_js__WEBPACK_IMPORTED_MODULE_1__.postLikes)(i + 1, INVresult[i].likes);\n    });\n    const commentButton = document.createElement('a');\n    commentButton.classList.add('civ-button', 'btn', 'my-2');\n    commentButton.id = `Commentbutton-${i}`;\n    commentButton.innerText = 'Comments';\n    commentButton.style = 'width: 80%';\n    commentButton.addEventListener('click', () => {\n      (0,_item_js__WEBPACK_IMPORTED_MODULE_2__.displayPopup)(errorCounter + 1);\n    });\n    body.appendChild(text);\n    body.appendChild(likeButton);\n    body.appendChild(commentButton);\n    elemContainer.appendChild(body);\n    base.appendChild(elemContainer);\n    itemCount += 1;\n  }\n  (0,_itemcounter_js__WEBPACK_IMPORTED_MODULE_3__.default)(itemCount);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (fillPage);\n\n//# sourceURL=webpack://game-rating/./src/mainpage.js?");
 
 /***/ }),
 
@@ -281,16 +294,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/assets/img/aztecs.png":
-/*!***********************************!*\
-  !*** ./src/assets/img/aztecs.png ***!
-  \***********************************/
 /***/ "./src/services/helpers/helpers.js":
 /*!*****************************************!*\
   !*** ./src/services/helpers/helpers.js ***!
   \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"nodeChildrenCounter\": () => (/* binding */ nodeChildrenCounter)\n/* harmony export */ });\n/* harmony import */ var _model_counter_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../model/counter.js */ \"./src/services/model/counter.js\");\n/* eslint-disable import/prefer-default-export */\n/* eslint-disable max-len */\n\n\n\nconst nodeChildrenCounter = ({ node }) => new _model_counter_js__WEBPACK_IMPORTED_MODULE_0__.default({ startPoint: node.childElementCount });\n\n//# sourceURL=webpack://game-rating/./src/services/helpers/helpers.js?");
 
 /***/ }),
@@ -301,337 +311,338 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Counter)\n/* harmony export */ });\nclass Counter {\n    #value\n\n    constructor({ startPoint = 0 }) {\n      this.#value = startPoint;\n    }\n\n    get value() {\n      return this.#value;\n    }\n\n    increase() {\n      this.#value += 1;\n      return this;\n    }\n\n    decrease() {\n      this.#value -= 1;\n      return this;\n    }\n\n    reset() {\n      this.#value = 0;\n    }\n}\n\n//# sourceURL=webpack://game-rating/./src/services/model/counter.js?");
 
 /***/ }),
 
-/***/ "./src/assets/imgs/1.png":
+/***/ "./src/assets/img/01.png":
 /*!*******************************!*\
-  !*** ./src/assets/imgs/1.png ***!
+  !*** ./src/assets/img/01.png ***!
   \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"cc93b0fa04dd970a5405.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/aztecs.png?");
+eval("module.exports = __webpack_require__.p + \"cc93b0fa04dd970a5405.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/01.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/berbers.png":
-/*!************************************!*\
-  !*** ./src/assets/img/berbers.png ***!
-  \************************************/
+/***/ "./src/assets/img/02.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/02.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"af993098dc73024f7a5d.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/berbers.png?");
+eval("module.exports = __webpack_require__.p + \"4719098d55bb92e50f7d.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/02.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/britons.png":
-/*!************************************!*\
-  !*** ./src/assets/img/britons.png ***!
-  \************************************/
+/***/ "./src/assets/img/03.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/03.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"4719098d55bb92e50f7d.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/britons.png?");
+eval("module.exports = __webpack_require__.p + \"a16bc5147b25c59ca4b1.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/03.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/burmese.png":
-/*!************************************!*\
-  !*** ./src/assets/img/burmese.png ***!
-  \************************************/
+/***/ "./src/assets/img/04.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/04.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"5c499ba9a071c0715469.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/burmese.png?");
+eval("module.exports = __webpack_require__.p + \"19741ca59130f2ddb52f.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/04.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/byzantines.png":
-/*!***************************************!*\
-  !*** ./src/assets/img/byzantines.png ***!
-  \***************************************/
+/***/ "./src/assets/img/05.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/05.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"a16bc5147b25c59ca4b1.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/byzantines.png?");
+eval("module.exports = __webpack_require__.p + \"e45087a71e9944586e5e.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/05.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/celts.png":
-/*!**********************************!*\
-  !*** ./src/assets/img/celts.png ***!
-  \**********************************/
+/***/ "./src/assets/img/06.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/06.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"19741ca59130f2ddb52f.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/celts.png?");
+eval("module.exports = __webpack_require__.p + \"1dc4b17a0f69c0316092.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/06.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/chinese.png":
-/*!************************************!*\
-  !*** ./src/assets/img/chinese.png ***!
-  \************************************/
+/***/ "./src/assets/img/07.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/07.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"e45087a71e9944586e5e.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/chinese.png?");
+eval("module.exports = __webpack_require__.p + \"25c45a3a2931cb2665c7.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/07.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/ethiopians.png":
-/*!***************************************!*\
-  !*** ./src/assets/img/ethiopians.png ***!
-  \***************************************/
+/***/ "./src/assets/img/08.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/08.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"ac445cd326381252d45c.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/ethiopians.png?");
+eval("module.exports = __webpack_require__.p + \"5d5032f3c5932e1ea846.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/08.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/franks.png":
-/*!***********************************!*\
-  !*** ./src/assets/img/franks.png ***!
-  \***********************************/
+/***/ "./src/assets/img/09.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/09.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"1dc4b17a0f69c0316092.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/franks.png?");
+eval("module.exports = __webpack_require__.p + \"efa83ff86ab3bb4921f3.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/09.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/goths.png":
-/*!**********************************!*\
-  !*** ./src/assets/img/goths.png ***!
-  \**********************************/
+/***/ "./src/assets/img/10.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/10.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"65f10a5e752def2d0f1c.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/goths.png?");
+eval("module.exports = __webpack_require__.p + \"de112d5ce8c22ef8592c.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/10.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/huns.png":
-/*!*********************************!*\
-  !*** ./src/assets/img/huns.png ***!
-  \*********************************/
+/***/ "./src/assets/img/11.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/11.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"25c45a3a2931cb2665c7.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/huns.png?");
+eval("module.exports = __webpack_require__.p + \"b84928c29f8b87d1d780.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/11.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/incas.png":
-/*!**********************************!*\
-  !*** ./src/assets/img/incas.png ***!
-  \**********************************/
+/***/ "./src/assets/img/12.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/12.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"f59894eb9c69f29ae8a7.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/incas.png?");
+eval("module.exports = __webpack_require__.p + \"abde262d670f806c9fe1.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/12.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/indians.png":
-/*!************************************!*\
-  !*** ./src/assets/img/indians.png ***!
-  \************************************/
+/***/ "./src/assets/img/13.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/13.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"df8094f2037b52e6fefd.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/indians.png?");
+eval("module.exports = __webpack_require__.p + \"8ec8a6b6ba9dcddf4ac7.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/13.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/italians.png":
-/*!*************************************!*\
-  !*** ./src/assets/img/italians.png ***!
-  \*************************************/
+/***/ "./src/assets/img/14.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/14.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"65dfe70a511e9b628a49.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/italians.png?");
+eval("module.exports = __webpack_require__.p + \"cc94d255aa66822be00d.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/14.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/japanese.png":
-/*!*************************************!*\
-  !*** ./src/assets/img/japanese.png ***!
-  \*************************************/
+/***/ "./src/assets/img/15.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/15.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"36f8430da1951f58d23b.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/japanese.png?");
+eval("module.exports = __webpack_require__.p + \"7fce1c17a7b43b9b9c1e.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/15.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/khmer.png":
-/*!**********************************!*\
-  !*** ./src/assets/img/khmer.png ***!
-  \**********************************/
+/***/ "./src/assets/img/16.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/16.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"8b92d3276ad5758fb084.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/khmer.png?");
+eval("module.exports = __webpack_require__.p + \"8963f7e84b7668fb653c.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/16.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/koreans.png":
-/*!************************************!*\
-  !*** ./src/assets/img/koreans.png ***!
-  \************************************/
+/***/ "./src/assets/img/17.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/17.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"5d5032f3c5932e1ea846.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/koreans.png?");
+eval("module.exports = __webpack_require__.p + \"af993098dc73024f7a5d.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/17.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/magyars.png":
-/*!************************************!*\
-  !*** ./src/assets/img/magyars.png ***!
-  \************************************/
+/***/ "./src/assets/img/18.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/18.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"1a05655b0d0b1b25a91d.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/magyars.png?");
+eval("module.exports = __webpack_require__.p + \"5c499ba9a071c0715469.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/18.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/malians.png":
-/*!************************************!*\
-  !*** ./src/assets/img/malians.png ***!
-  \************************************/
+/***/ "./src/assets/img/19.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/19.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"5888c75b34f8e05d11f1.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/malians.png?");
+eval("module.exports = __webpack_require__.p + \"ac445cd326381252d45c.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/19.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/mayans.png":
-/*!***********************************!*\
-  !*** ./src/assets/img/mayans.png ***!
-  \***********************************/
+/***/ "./src/assets/img/20.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/20.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"efa83ff86ab3bb4921f3.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/mayans.png?");
+eval("module.exports = __webpack_require__.p + \"65f10a5e752def2d0f1c.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/20.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/mongols.png":
-/*!************************************!*\
-  !*** ./src/assets/img/mongols.png ***!
-  \************************************/
+/***/ "./src/assets/img/21.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/21.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"de112d5ce8c22ef8592c.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/mongols.png?");
+eval("module.exports = __webpack_require__.p + \"f59894eb9c69f29ae8a7.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/21.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/persians.png":
-/*!*************************************!*\
-  !*** ./src/assets/img/persians.png ***!
-  \*************************************/
+/***/ "./src/assets/img/22.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/22.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"b84928c29f8b87d1d780.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/persians.png?");
+eval("module.exports = __webpack_require__.p + \"df8094f2037b52e6fefd.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/22.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/portuguese.png":
-/*!***************************************!*\
-  !*** ./src/assets/img/portuguese.png ***!
-  \***************************************/
+/***/ "./src/assets/img/23.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/23.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"3f341eb5f5792be2435f.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/portuguese.png?");
+eval("module.exports = __webpack_require__.p + \"65dfe70a511e9b628a49.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/23.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/saracens.png":
-/*!*************************************!*\
-  !*** ./src/assets/img/saracens.png ***!
-  \*************************************/
+/***/ "./src/assets/img/24.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/24.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"abde262d670f806c9fe1.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/saracens.png?");
+eval("module.exports = __webpack_require__.p + \"36f8430da1951f58d23b.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/24.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/slavs.png":
-/*!**********************************!*\
-  !*** ./src/assets/img/slavs.png ***!
-  \**********************************/
+/***/ "./src/assets/img/25.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/25.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"faefde7f13d3dff17cbd.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/slavs.png?");
+eval("module.exports = __webpack_require__.p + \"8b92d3276ad5758fb084.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/25.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/spanish.png":
-/*!************************************!*\
-  !*** ./src/assets/img/spanish.png ***!
-  \************************************/
+/***/ "./src/assets/img/26.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/26.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"8ec8a6b6ba9dcddf4ac7.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/spanish.png?");
+eval("module.exports = __webpack_require__.p + \"1a05655b0d0b1b25a91d.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/26.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/teutons.png":
-/*!************************************!*\
-  !*** ./src/assets/img/teutons.png ***!
-  \************************************/
+/***/ "./src/assets/img/27.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/27.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"cc94d255aa66822be00d.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/teutons.png?");
+eval("module.exports = __webpack_require__.p + \"5888c75b34f8e05d11f1.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/27.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/turks.png":
-/*!**********************************!*\
-  !*** ./src/assets/img/turks.png ***!
-  \**********************************/
+/***/ "./src/assets/img/28.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/28.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"7fce1c17a7b43b9b9c1e.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/turks.png?");
+eval("module.exports = __webpack_require__.p + \"3f341eb5f5792be2435f.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/28.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/vietnamese.png":
-/*!***************************************!*\
-  !*** ./src/assets/img/vietnamese.png ***!
-  \***************************************/
+/***/ "./src/assets/img/29.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/29.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"3dfd8b705dbe8b6891be.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/vietnamese.png?");
+eval("module.exports = __webpack_require__.p + \"faefde7f13d3dff17cbd.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/29.png?");
 
 /***/ }),
 
-/***/ "./src/assets/img/vikings.png":
-/*!************************************!*\
-  !*** ./src/assets/img/vikings.png ***!
-  \************************************/
+/***/ "./src/assets/img/30.png":
+/*!*******************************!*\
+  !*** ./src/assets/img/30.png ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"8963f7e84b7668fb653c.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/vikings.png?");
+eval("module.exports = __webpack_require__.p + \"3dfd8b705dbe8b6891be.png\";\n\n//# sourceURL=webpack://game-rating/./src/assets/img/30.png?");
 
 /***/ }),
 
