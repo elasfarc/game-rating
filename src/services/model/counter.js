@@ -10,12 +10,12 @@ export default class Counter {
     }
 
     increase() {
-      this.#value++;
+      this.#value += 1;
       return this;
     }
 
     decrease() {
-      this.#value--;
+      this.#value -= 1;
       return this;
     }
 
