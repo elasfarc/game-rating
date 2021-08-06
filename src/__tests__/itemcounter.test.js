@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-import itemCounter from '../src/itemcounter.js';
+import itemCounter from '../itemcounter.js';
 
 describe('check for correct item count display', () => {
   document.body.innerHTML = '<div id="MainContent"><div id="grid" class="row justify-content-between mb-4"><div></div><div></div><div></div><div></div></div></div>';
