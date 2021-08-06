@@ -13,7 +13,6 @@ const fillPage = async () => {
   const entrypoint = 'civilizations';
   let result;
   const INVresult = await getLikes();
-  console.log(INVresult);
   if (!localStorage.getItem('database')) {
     result = await get({ API: 'AOE', entrypoint });
     window.localStorage.setItem('database', JSON.stringify(result));
@@ -22,9 +21,15 @@ const fillPage = async () => {
   }
   result.civilizations.splice(6, 1);
   result.civilizations.splice(7, 1);
+  let likeInput;
   for (let i = 0, errorCounter = 0; i < result.civilizations.length; i += 1, errorCounter += 1) {
     if (i === 6 || i === 7) {
       errorCounter += 1;
+    }
+    if (INVresult.length > i) {
+      likeInput = INVresult[i].likes;
+    } else {
+      likeInput = 0;
     }
     const base = document.getElementById('grid');
     const elemContainer = document.createElement('div');
@@ -43,7 +48,7 @@ const fillPage = async () => {
     const likeButton = document.createElement('a');
     likeButton.classList.add('civ-button', 'btn', 'mx-2');
     likeButton.id = `Likebutton-${i}`;
-    likeButton.innerText = 'Like';
+    likeButton.innerText = `Like : ${likeInput}`;
     likeButton.style = 'width: 40%';
     const commentButton = document.createElement('a');
     commentButton.classList.add('civ-button', 'btn', 'mx-2');
