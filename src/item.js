@@ -98,7 +98,7 @@ const DisplayAllItemComments = async (itemID = 1) => {
   // non-making-sense-req
   const commentsCounter = nodeChildrenCounter({ nodeTree: itemComments });
   itemComments.insertAdjacentHTML('afterbegin', `
-  <div class='comments-box-heading'>
+  <div class='comments-box-heading flex center y-axis-center'>
       Comments ( <span id='comments-counter'>${commentsCounter.value}</span> )
   </div>
 `);

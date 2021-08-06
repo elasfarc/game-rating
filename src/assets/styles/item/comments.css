@@ -12,7 +12,6 @@
 .item-comments .comments-box-heading {
   position: sticky;
   top: 0;
-  text-align: center;
   height: 4rem;
   background-color: #1c0234;
   color: #ffd400;
@@ -40,9 +39,9 @@
 }
 
 .comment .date {
-  font-size: 70%;
+  font-size: 60%;
   letter-spacing: 2px;
-  opacity: 0.5;
+  _opacity: 0.5;
   line-height: 1.8;
 }
 
