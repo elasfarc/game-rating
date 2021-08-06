@@ -44,13 +44,11 @@ const fillPage = async () => {
     text.innerText = `${result.civilizations[i].name}`;
     const likeButton = document.createElement('a');
     likeButton.classList.add('civ-button', 'btn', 'mx-2');
-    likeButton.id = `Likebutton-${i}`;
-    likeButton.innerText = `Like : ${INVresult[i].likes}`;
+    likeButton.id = `Likebutton-${i + 1}`;
+    likeButton.innerText = `Likes : ${INVresult[i].likes}`;
     likeButton.style = 'width: 40%';
     likeButton.addEventListener('click', () => {
-      postLikes(i + 1);
-      INVresult[i].likes += 1;
-      likeButton.innerText = `Like : ${INVresult[i].likes}`;
+      postLikes(i + 1, INVresult[i].likes);
     });
     const commentButton = document.createElement('a');
     commentButton.classList.add('civ-button', 'btn', 'mx-2');

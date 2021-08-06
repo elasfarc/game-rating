@@ -6,10 +6,11 @@ const getLikes = async () => {
   return result;
 };
 
-const postLikes = async (id) => {
+const postLikes = async (id, currentLikes) => {
   const entrypoint = 'likes';
   const data = { item_id: id };
   const { status } = await post({ API: 'involvement', entrypoint, data });
+  document.getElementById(`Likebutton-${id}`).innerText = `Likes: ${currentLikes + 1}`;
   return status;
 };
 export { getLikes, postLikes };
