@@ -3,4 +3,4 @@
 
 import Counter from '../model/counter.js';
 
-export const nodeChildrenCounter = ({ node }) => new Counter({ startPoint: node.childElementCount });
+export const elementChildrenCounter = ({ element }) => new Counter({ startPoint: element.childElementCount });
