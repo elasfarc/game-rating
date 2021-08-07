@@ -5,7 +5,6 @@
 }
 
 .item-container {
-  _max-width: 1200px;
   padding: 2rem;
   width: 100vw;
   height: 100vh;
@@ -13,7 +12,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  _border: 10px solid white;
   border-radius: 5px;
   transition: all 0.6s;
   overflow-y: scroll;
@@ -22,13 +20,8 @@
 }
 
 .close {
-  _width: 8vw;
-  _height: 6vw;
   position: absolute;
   left: 95%;
-  _border: 10px solid white;
-  _border-radius: 5px;
-  _padding: 10px;
 }
 
 .close i {

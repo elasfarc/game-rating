@@ -1,8 +1,7 @@
 
 .item-comments {
+  width: 70%;
   color: white;
-  _background-color: rgba(0, 0, 0, 0.5);
-  _border: 5px double white;
   border-radius: 5px;
   margin-top: 2rem;
   max-height: 70vh;
@@ -21,12 +20,8 @@
   background-color: rgba(255, 255, 255, 0.5);
   padding: 1rem 2rem;
   margin: 1rem;
-  border-radius: 10px;
   min-height: 100px;
-}
-
-.comment > p {
-  _margin: 1rem 0;
+  border-radius: 20px 60px 80px 40px;
 }
 
 .comment .avatar {
@@ -41,7 +36,6 @@
 .comment .date {
   font-size: 60%;
   letter-spacing: 2px;
-  _opacity: 0.5;
   line-height: 1.8;
 }
 
