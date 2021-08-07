@@ -29,6 +29,9 @@ The "likes" button serves both as a counter and a button for users to show their
 ## Live Version
 [Click Here](https://elasfarc.github.io/game-rating/dist/)
 
+## Video Description
+[Link](https://drive.google.com/file/d/1PBfN_NzbgIYnDPpiQ-NLbRQN7jd5hgAS/view?usp=sharing)
+
 ## Built With
 
 - HTML
