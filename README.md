@@ -6,19 +6,28 @@ A lightweight JavaScript project that displays all the Civilizations the Age of 
 
 ## Project Description
 This project combines the use of JavaScript, HTML/CSS and Bootstrap to provide users with a fully responsive app that is updated dynamically. The project is compiled using Webpack to ensure stability and longevity. 
+
 Using this project, users can interact with each other via the comments section, or by leaving likes on the civilizations that they support. 
+
+
 The main landing page displays a grid of item cards, which has the banner of the civilizations on the top, the name of the civilization underneath the banner, a "likes" button, and a "comments" button.
+
 Users can click on the "comments" button on each of the civilizations to open up a pop-up screen that displays the detailed information, comments section and a text area to leave a new comment.
+
 The "likes" button serves both as a counter and a button for users to show their support by liking the civilizations that they like to play. Users are free to leave as many likes as they wish, there is no limitation on the number of likes one user can submit.
 
 
 ## Screenshots of the page
-![Screenshot Profile Page](https://user-images.githubusercontent.com/34018257/128491538-f1aa4a88-eab7-409c-9cd5-8d0d88d73c83.png)
-![Screenshot Profile Page](https://user-images.githubusercontent.com/34018257/128491663-e86e326a-7386-43d2-a414-63989d773fca.png)
+
+![aoe](https://user-images.githubusercontent.com/34018257/128583568-22831db9-c474-4910-b211-ad07eaf3a12e.GIF)
+
+![aoe2](https://user-images.githubusercontent.com/34018257/128583574-457ea6b1-89ac-415a-8a1f-742fcb62f585.gif)
+
+![aoe3](https://user-images.githubusercontent.com/34018257/128583577-aaf37e5c-1674-4fc8-86e4-973048810076.gif)
 
 
 ## Live Version
-![Live Version](https://elasfarc.github.io/game-rating/dist/)
+[Click Here](https://elasfarc.github.io/game-rating/dist/)
 
 ## Built With
 
@@ -35,7 +44,8 @@ The "likes" button serves both as a counter and a button for users to show their
 3. Copy and paste the following code into the Terminal: git clone https://github.com/elasfarc/game-rating.git
 4. ```cd game-rating```.
 5. Install the required node modules by running `npm install` command.
-6. After installing all the required node modules, you can run the project on your own server using `npm run start` or just use the index.html file to preview it.
+6. If you're planning to test the project locally, you need a CORS app. Visit this [link](https://cors-anywhere.herokuapp.com/corsdemo) and request temporary access to be able to use this app on your own system.
+7. After installing all the required node modules, you can run the project on your own server using `npm run start` or just use the index.html file to preview it.
 
 
 ## Contributors
