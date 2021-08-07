@@ -15,7 +15,7 @@ const generateFlashMsg = ({ type, msg = undefined }) => {
 
 const AddContainerStructureAndStyles = () => {
   const body = document.querySelector('body');
-  // const appContainer = document.querySelector('.container');
+
   const bodyElements = document.querySelectorAll('body > div:not(.item-container), nav, footer');
   const itemContainer = document.createElement('div');
   itemContainer.classList.add('item-container');
@@ -27,12 +27,11 @@ const AddContainerStructureAndStyles = () => {
   const closeBtn = itemContainer.querySelector('.close');
   closeBtn.addEventListener('click', () => {
     itemContainer.classList.add('hide');
-    // appContainer.classList.remove('blur-bg');
+
     bodyElements.forEach((ele) => ele.classList.remove('blur-bg'));
     setTimeout(() => { body.removeChild(itemContainer); }, 600);
   });
 
-  // appContainer.classList.add('blur-bg');
   bodyElements.forEach((ele) => ele.classList.add('blur-bg'));
   body.appendChild(itemContainer);
 };
@@ -41,10 +40,9 @@ const AddItemDetails = async (itemID = 1) => {
   const itemDetails = document.createElement('div');
   itemDetails.classList.add('item-details', 'flex', 'space-around');
 
-  // external api
   const entrypoint = `civilization/${itemID}`;
   const result = await get({ API: 'AOE', entrypoint });
-  //
+
   itemDetails.innerHTML = `     
             <div class='data'>
                 <p>name: ${result.name}</p> 
@@ -80,11 +78,9 @@ const createCommentComponnent = ({ username, creationDate, comment }) => `
     </div>
     `;
 const DisplayAllItemComments = async (itemID = 1) => {
-  // debugger
   const itemComments = document.createElement('div');
   itemComments.classList.add('item-comments');
 
-  // external api
   const entrypoint = `comments?item_id=${itemID}`;
   let comments = await get({ API: 'involvement', entrypoint });
   // eslint-disable-next-line no-unused-expressions
@@ -98,7 +94,6 @@ const DisplayAllItemComments = async (itemID = 1) => {
     itemComments.innerHTML += createCommentComponnent(data);
   });
 
-  // non-making-sense-req
   const commentsCounter = elementChildrenCounter({ element: itemComments });
   itemComments.insertAdjacentHTML('afterbegin', `
   <div class='comments-box-heading flex center y-axis-center'>
@@ -117,27 +112,26 @@ const postComment = async ({ item_id, username, comment }) => {
 };
 
 const handleSubmitionSuccess = ({ name, comment }) => {
-  // Add the comment to the comments container
   document.querySelector('.item-comments').innerHTML += createCommentComponnent({ username: name.value, comment: comment.value, creationDate: 'now' });
-  // update the comments counter locally
+
   const counterContainer = document.getElementById('comments-counter');
   const currentCounter = counterContainer.innerText;
   counterContainer.innerText = parseInt(currentCounter, 10) + 1;
-  // clean
+
   name.value = '';
   comment.value = '';
 };
 
 const submitCommentHandler = async (event) => {
   event.preventDefault();
-  // extract the data
+
   const { name, comment } = event.target.elements;
   const itemID = event.target.dataset.itemid;
-  // call postComment with the data
+
   const data = { item_id: itemID, username: name.value, comment: comment.value };
   const response = await postComment(data);
   const isSuccessful = (response === 201);
-  // confirm
+
   if (isSuccessful) handleSubmitionSuccess({ name, comment });
   const flashMsg = generateFlashMsg({ type: isSuccessful });
   event.target.appendChild(flashMsg);
@@ -166,23 +160,18 @@ const createNewCommentForm = (itemID) => {
 };
 
 export const displayPopup = async (itemID) => {
-  // the whole item container
   AddContainerStructureAndStyles();
   const contentContainer = document.querySelector('.content-container');
 
-  // item info
   const itemDetails = await AddItemDetails(itemID);
   contentContainer.appendChild(itemDetails);
 
-  // item add comment
   const newCommentContainer = createNewCommentForm(itemID);
   contentContainer.appendChild(newCommentContainer);
 
-  // add eventlisteners
   const newCommentForm = document.forms.newComment;
   newCommentForm.addEventListener('submit', submitCommentHandler);
 
-  // item comments
   const itemComments = await DisplayAllItemComments(itemID);
   contentContainer.appendChild(itemComments);
 };

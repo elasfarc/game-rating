@@ -32,7 +32,7 @@ const fillPage = async () => {
     }
     const base = document.getElementById('grid');
     const elemContainer = document.createElement('div');
-    elemContainer.classList.add('col-xxl-2', 'list-element', 'card', 'col-12', 'col-xl-5', 'my-xl-2', 'my-3', 'mx-xl-2');
+    elemContainer.classList.add('col-xxl-2', 'list-element', 'card', 'col-12', 'col-xl-3', 'col-sm-5', 'col-md-3', 'mx-md-3', 'mb-xl-4', 'my-3', 'mx-xl-2');
     elemContainer.id = `Card-${i}`;
     const img = document.createElement('img');
     img.src = images[i];
