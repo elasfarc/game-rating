@@ -1,12 +1,15 @@
 # Game Rating
-TBA
+A lightweight JavaScript project that displays all the Civilizations the Age of Empires 2 Definitive Edition has to offer. All the data is retrieved from the AOE2 Civilizations [API](https://age-of-empires-2-api.herokuapp.com/api/v1), and used in combination with Involvement API to allow users an interactive website to discuss and support their favorite civilizations.
 
 
 
 
 ## Project Description
-TBA
-
+This project combines the use of JavaScript, HTML/CSS and Bootstrap to provide users with a fully responsive app that is updated dynamically. The project is compiled using Webpack to ensure stability and longevity. 
+Using this project, users can interact with each other via the comments section, or by leaving likes on the civilizations that they support. 
+The main landing page displays a grid of item cards, which has the banner of the civilizations on the top, the name of the civilization underneath the banner, a "likes" button, and a "comments" button.
+Users can click on the "comments" button on each of the civilizations to open up a pop-up screen that displays the detailed information, comments section and a text area to leave a new comment.
+The "likes" button serves both as a counter and a button for users to show their support by liking the civilizations that they like to play. Users are free to leave as many likes as they wish, there is no limitation on the number of likes one user can submit.
 
 
 ## Screenshots of the page
@@ -15,7 +18,7 @@ TBA
 
 
 ## Live Version
-TBA
+![Live Version](https://elasfarc.github.io/game-rating/dist/)
 
 ## Built With
 
