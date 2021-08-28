@@ -17,6 +17,7 @@ const fillPage = async () => {
   const INVresult = await getLikes();
   if (!localStorage.getItem('database')) {
     result = await get({ API: 'AOE', entrypoint });
+    console.log(result);
     window.localStorage.setItem('database', JSON.stringify(result));
   } else {
     result = JSON.parse(window.localStorage.getItem('database'));
