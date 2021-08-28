@@ -18,7 +18,7 @@ const postOptions = (data) => ({
 });
 
 export const get = async ({ API, entrypoint }) => {
-  const url = `${CORS_URL}/${BASE_URL[API]}/${entrypoint}`;
+  const url = `${BASE_URL[API]}/${entrypoint}`;
   try {
     const response = await fetch(url);
     const data = await response.json();
